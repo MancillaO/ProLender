@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Bienvenido"
-        android:textSize="22sp"
+        android:textSize="21sp"
         android:layout_marginTop="5dp"
         android:layout_centerHorizontal="true"
         android:textColor="#ffffff"
