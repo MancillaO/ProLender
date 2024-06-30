@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/home_icon"/>
+    <item android:id="@+id/clientes"
+        android:title="Clientes"
+        android:icon="@drawable/clientes_icon"/>
+    <item android:id="@+id/prestamos"
+        android:title="Prestamos"
+        android:icon="@drawable/prestamos_icon"/>
+    <item android:id="@+id/config"
+        android:title="Configuración"
+        android:icon="@drawable/config_icon"/>
+</menu>

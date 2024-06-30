@@ -21,6 +21,9 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.btnCrear) {
             miIntent = new Intent(MainActivity.this, CrearCuentaActivity.class);
         }
+        if (id == R.id.btnContinuar) {
+            miIntent = new Intent(MainActivity.this, HomeActivity.class);
+        }
 
         if (miIntent != null) {
             startActivity(miIntent);
