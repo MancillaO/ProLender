@@ -8,16 +8,6 @@
     tools:context=".HomeActivity"
     android:background="@drawable/gradient_background">
 
-        <TextView
-            android:id="@+id/titulo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Home"
-            android:textSize="30sp"
-            android:textColor="#ffffff"
-            android:textStyle="bold"
-            android:layout_centerInParent="true"/>
-
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"

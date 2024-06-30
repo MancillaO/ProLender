@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.example.prolender.databinding.ActivityHomeBinding;
 
@@ -16,24 +19,35 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityHomeBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        replaceFragment(new HomeFragment());
 
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
             int itemId = item.getItemId();
 
             if (itemId == R.id.home) {
-                Toast.makeText(HomeActivity.this, "Home selected", Toast.LENGTH_SHORT).show();
+                replaceFragment(new HomeFragment());
 
             } else if (itemId == R.id.clientes) {
-                Toast.makeText(HomeActivity.this, "Clientes selected", Toast.LENGTH_SHORT).show();
+                replaceFragment(new ClientesFragment());
 
             } else if (itemId == R.id.prestamos) {
-                Toast.makeText(HomeActivity.this, "Prestamos selected", Toast.LENGTH_SHORT).show();
+                replaceFragment(new PrestamosFragment());
 
             } else if (itemId == R.id.config) {
-                Toast.makeText(HomeActivity.this, "Config selected", Toast.LENGTH_SHORT).show();
+                replaceFragment(new ConfigFragment());
             }
 
             return true;
         });
     }
+
+    private void replaceFragment (Fragment fragment){
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.frameLayout, fragment);
+        fragmentTransaction.commit();
+
+    }
+
 }
