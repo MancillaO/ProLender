@@ -71,7 +71,6 @@
         android:background="@drawable/rounded_edittext_background"
         />
 
-
     <Button
         android:id="@+id/btnContinuar"
         android:layout_width="300dp"
@@ -133,6 +132,5 @@
         android:layout_below="@id/text3"
         android:textSize="16dp"
         android:padding="15dp"/>
-
 
 </RelativeLayout>
