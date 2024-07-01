@@ -8,6 +8,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import android.view.View;
+
 
 import com.example.prolender.databinding.ActivityHomeBinding;
 
@@ -21,7 +23,7 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         replaceFragment(new HomeFragment());
 
-        binding.bottomNavigationView.setOnItemSelectedListener(item -> {
+            binding.bottomNavigationView.setOnItemSelectedListener(item -> {
             int itemId = item.getItemId();
 
             if (itemId == R.id.home) {
@@ -39,6 +41,19 @@ public class HomeActivity extends AppCompatActivity {
 
             return true;
         });
+    }
+    public void onClick(View view) {
+        int id = view.getId();
+        Intent miIntent = null;
+
+        if (id == R.id.IconUser) {
+            miIntent = new Intent(HomeActivity.this, MainActivity.class);
+        } else {
+            Toast.makeText(this, "Acción no reconocida", Toast.LENGTH_SHORT).show();
+        }
+        if (miIntent != null) {
+            startActivity(miIntent);
+        }
     }
 
     private void replaceFragment (Fragment fragment){

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeFragment">
+    tools:context=".HomeActivity">
 
     <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -11,52 +11,252 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#F4F4F4"
         tools:context=".HomeActivity"
         >
 
-        <TextView
-            android:id="@+id/txtTitulo"
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:id="@+id/topbar"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ProLender"
-            android:textSize="32sp"
-            android:textColor="#481089"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="12dp"
-            android:textStyle="bold"
-            />
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/background_circle"
+            >
 
-        <TextView
-            android:id="@+id/txtUser"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Admin"
-            android:textSize="22sp"
-            android:textColor="#000000"
-            android:layout_marginTop="19dp"
-            android:layout_toLeftOf="@id/IconUser"
-            android:layout_marginRight="10dp"
-            />
+            <TextView
+                android:id="@+id/txtTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ProLender"
+                android:textSize="32sp"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="20dp"
+                android:layout_marginVertical="12dp"
+                android:textStyle="bold"
+                android:onClick="onClick"
 
-        <ImageView
-            android:id="@+id/IconUser"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/icono_usuario"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="20dp"
-            />
+                />
 
+            <TextView
+                android:id="@+id/txtUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Admin"
+                android:textSize="22sp"
+                android:textColor="#ffffff"
+                android:layout_marginVertical="19dp"
+                android:layout_toLeftOf="@id/IconUser"
+                android:layout_marginRight="10dp"
+                />
+
+            <ImageView
+                android:id="@+id/IconUser"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginVertical="10dp"
+                android:src="@drawable/icon_user"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:onClick="onClick"
+                />
+
+        </RelativeLayout>
+
+        <!--
+        <View
+            android:id="@+id/line1"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient_background"
+            android:layout_centerInParent="true"
+            />
 
         <View
             android:id="@+id/line2"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_below="@id/IconUser"
-            android:background="#000000"
-            android:layout_marginTop="10dp"
+            android:layout_height="2dp"
+            android:background="@drawable/gradient_background"
+            android:layout_centerInParent="true"
             />
+            -->
+
+        <TextView
+            android:id="@+id/txtPrestamos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prestamos"
+            android:textSize="32sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_below="@id/topbar"
+            />
+
+        <RelativeLayout
+            android:id="@+id/card1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtPrestamos"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="12dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="75dp"
+            android:paddingVertical="20dp"
+            android:background="@drawable/card_white"
+            >
+
+        <TextView
+            android:id="@+id/card1_titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Activos"
+            android:textSize="30sp"
+            android:textColor="#481089"
+            android:textStyle="bold"
+            />
+
+            <TextView
+                android:id="@+id/txtcard1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20"
+                android:textSize="25sp"
+                android:textColor="#000000"
+                android:layout_below="@id/card1_titulo"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                />
+
+            </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/card2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtPrestamos"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="12dp"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="25dp"
+            android:paddingRight="40dp"
+            android:paddingVertical="20dp"
+            android:background="@drawable/card_white"
+            >
+
+            <TextView
+                android:id="@+id/card2_titulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Atrasados"
+                android:textSize="30sp"
+                android:textColor="#481089"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/txtcard2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8"
+                android:textSize="25sp"
+                android:textColor="#000000"
+                android:layout_below="@id/card2_titulo"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/card3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card1"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="12dp"
+            android:layout_centerHorizontal="true"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="20dp"
+            android:background="@drawable/card_white"
+            >
+
+            <TextView
+                android:id="@+id/card3_titulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Monto total prestado"
+                android:textSize="30sp"
+                android:textColor="#481089"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/txtcard3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$20,000"
+                android:textSize="25sp"
+                android:textColor="#000000"
+                android:layout_below="@id/card3_titulo"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                />
+
+        </RelativeLayout>
+
+        <!--
+        <TextView
+            android:id="@+id/txtAceptados"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aceptados Recientemente"
+            android:textSize="29sp"
+            android:layout_marginTop="25dp"
+            android:layout_marginHorizontal="20dp"
+            android:textColor="#000000"
+            android:layout_below="@id/card3"
+            />
+
+        <RelativeLayout
+            android:id="@+id/aceptado1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtAceptados"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="12dp"
+            android:layout_centerHorizontal="true"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="20dp"
+            android:background="@drawable/card_white"
+            >
+
+            <TextView
+                android:id="@+id/aceptado1_titulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Monto total prestado"
+                android:textSize="30sp"
+                android:textColor="#481089"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/monto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$20,000"
+                android:textSize="25sp"
+                android:textColor="#000000"
+                android:layout_below="@id/aceptado1_titulo"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                />
+
+        </RelativeLayout>
+        -->
+
 
 
     </RelativeLayout>
