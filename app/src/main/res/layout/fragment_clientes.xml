@@ -558,7 +558,7 @@
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="5dp"
                         android:layout_toRightOf="@id/tituloPrestamos4"
-                        android:text="1"
+                        android:text="3"
                         android:textColor="#000000"
                         android:textSize="18sp" />
 
