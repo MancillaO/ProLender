@@ -1,18 +1,494 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
-    tools:context=".PrestamosFragment">
+    tools:context=".PrestamosActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Prestamos"
-        android:layout_gravity="center"
-        android:textSize="40dp"
-        android:textColor="#9488de"
-        android:textStyle="bold"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E9E9E9"
+        tools:context=".PrestamosActivity">
+
+        <RelativeLayout
+            android:id="@+id/topbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background_circle">
+
+            <TextView
+                android:id="@+id/txtTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="12dp"
+                android:layout_marginLeft="20dp"
+                android:text="ProLender"
+                android:textColor="#ffffff"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="19dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/IconUser"
+                android:text="Admin"
+                android:textColor="#ffffff"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:id="@+id/IconUser"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginVertical="10dp"
+                android:layout_marginRight="20dp"
+                android:onClick="onClick"
+                android:src="@drawable/icon_user" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/add_prestamos"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/topbar"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/card_border"
+            android:paddingHorizontal="13dp"
+            android:paddingVertical="10dp">
+
+            <TextView
+                android:id="@+id/txt_add_prestamos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Agregar \nPréstamo"
+                android:textColor="#9488de"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/add_cliente_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:onClick="onClick"
+                android:src="@drawable/icon_add_prestamo" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/buscar_prestamos"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/topbar"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/card_border"
+            android:paddingHorizontal="13dp"
+            android:paddingVertical="10dp">
+
+            <TextView
+                android:id="@+id/txt_buscar_prestamos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Buscar \nPréstamo"
+                android:textColor="#9488de"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/buscar_cliente_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:onClick="onClick"
+                android:src="@drawable/icon_buscar_prestamos" />
+        </RelativeLayout>
+
+        <!-- Sección para la lista de préstamos -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/add_prestamos"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="20dp">
+
+                <!-- Reemplazar este bloque para cada préstamo -->
+
+                <RelativeLayout
+                    android:id="@+id/prestamo1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/card_white"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="20dp">
+
+                    <TextView
+                        android:id="@+id/prestamo_titulo1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Monto: $12,100"
+                        android:textColor="#000000"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/prestamo_titulo1"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/background" />
+
+                    <TextView
+                        android:id="@+id/tituloPlazo1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/prestamo_titulo1"
+                        android:layout_marginTop="15dp"
+                        android:text="Plazo de pago:"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtCorreo1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/prestamo_titulo1"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@id/tituloPlazo1"
+                        android:text="6 meses"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tituloRestante1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tituloPlazo1"
+                        android:layout_marginTop="5dp"
+                        android:text="Restante por pagar:"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtTelefono1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tituloPlazo1"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@id/tituloRestante1"
+                        android:text="$8,200"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+
+
+                    <TextView
+                        android:id="@+id/txtDetalles1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tituloRestante1"
+                        android:layout_marginTop="8dp"
+                        android:text="Ver Detalles"
+                        android:textColor="#9488de"
+                        android:textSize="18sp"
+                        android:textStyle="italic"
+                        android:clickable="true"
+                        android:onClick="onClick"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/prestamo2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/card_white"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="20dp">
+
+                    <TextView
+                        android:id="@+id/prestamo_titulo2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Monto: $8,100"
+                        android:textColor="#000000"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/prestamo_titulo2"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/background" />
+
+                    <TextView
+                        android:id="@+id/tituloPlazo2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/prestamo_titulo2"
+                        android:layout_marginTop="15dp"
+                        android:text="Plazo de pago:"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtPlazo2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/prestamo_titulo2"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@id/tituloPlazo2"
+                        android:text="12 meses"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tituloRestante2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tituloPlazo2"
+                        android:layout_marginTop="5dp"
+                        android:text="Restante por pagar:"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtRestante2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tituloPlazo2"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@id/tituloRestante2"
+                        android:text="$5,000"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/txtDetalles2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tituloRestante2"
+                        android:layout_marginTop="8dp"
+                        android:text="Ver Detalles"
+                        android:textColor="#9488de"
+                        android:textSize="18sp"
+                        android:textStyle="italic"
+                        android:clickable="true"
+                        android:onClick="onClick"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/prestamo3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/card_white"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="20dp">
+
+                    <TextView
+                        android:id="@+id/prestamo_titulo3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Monto: $15,500"
+                        android:textColor="#000000"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/prestamo_titulo3"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/background" />
+
+                    <TextView
+                        android:id="@+id/tituloPlazo3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/prestamo_titulo3"
+                        android:layout_marginTop="15dp"
+                        android:text="Plazo de pago:"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtPlazo3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/prestamo_titulo3"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@id/tituloPlazo3"
+                        android:text="18 meses"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tituloRestante3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tituloPlazo3"
+                        android:layout_marginTop="5dp"
+                        android:text="Restante por pagar:"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtRestante3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tituloPlazo3"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@id/tituloRestante3"
+                        android:text="$7,000"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/txtDetalles3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tituloRestante3"
+                        android:layout_marginTop="8dp"
+                        android:text="Ver Detalles"
+                        android:textColor="#9488de"
+                        android:textSize="18sp"
+                        android:textStyle="italic"
+                        android:clickable="true"
+                        android:onClick="onClick"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/prestamo4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/card_white"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="20dp">
+
+                    <TextView
+                        android:id="@+id/prestamo_titulo4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Monto: $2,000"
+                        android:textColor="#000000"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/prestamo_titulo4"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/background" />
+
+                    <TextView
+                        android:id="@+id/tituloPlazo4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/prestamo_titulo4"
+                        android:layout_marginTop="15dp"
+                        android:text="Plazo de pago:"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtPlazo4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/prestamo_titulo4"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@id/tituloPlazo4"
+                        android:text="3 meses"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tituloRestante4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tituloPlazo4"
+                        android:layout_marginTop="5dp"
+                        android:text="Restante por pagar:"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtRestante4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tituloPlazo4"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@id/tituloRestante4"
+                        android:text="$1,200"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/txtDetalles4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tituloRestante4"
+                        android:layout_marginTop="8dp"
+                        android:text="Ver Detalles"
+                        android:textColor="#9488de"
+                        android:textSize="18sp"
+                        android:textStyle="italic"
+                        android:clickable="true"
+                        android:onClick="onClick"/>
+
+                </RelativeLayout>
+              <!-- Fin del bloque de préstamo -->
+
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
 
 </FrameLayout>
