@@ -11,7 +11,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#F4F4F4"
+        android:background="#E9E9E9"
         tools:context=".HomeActivity"
         >
 
@@ -34,8 +34,6 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginVertical="12dp"
                 android:textStyle="bold"
-                android:onClick="onClick"
-
                 />
 
             <TextView
@@ -66,9 +64,9 @@
         <!--
         <View
             android:id="@+id/line1"
-            android:layout_width="1dp"
+            android:layout_width="2dp"
             android:layout_height="match_parent"
-            android:background="@drawable/gradient_background"
+            android:background="@drawable/background"
             android:layout_centerInParent="true"
             />
 
@@ -76,7 +74,7 @@
             android:id="@+id/line2"
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:background="@drawable/gradient_background"
+            android:background="@drawable/background"
             android:layout_centerInParent="true"
             />
             -->
@@ -100,7 +98,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/txtPrestamos"
             android:layout_marginTop="30dp"
-            android:layout_marginLeft="12dp"
+            android:layout_marginLeft="15dp"
             android:paddingLeft="20dp"
             android:paddingRight="75dp"
             android:paddingVertical="20dp"
@@ -137,7 +135,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/txtPrestamos"
             android:layout_marginTop="30dp"
-            android:layout_marginRight="12dp"
+            android:layout_marginRight="15dp"
             android:layout_alignParentRight="true"
             android:paddingLeft="25dp"
             android:paddingRight="40dp"
@@ -169,18 +167,18 @@
 
         </RelativeLayout>
 
-        <RelativeLayout
-            android:id="@+id/card3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/card1"
-            android:layout_marginTop="20dp"
-            android:layout_marginHorizontal="12dp"
-            android:layout_centerHorizontal="true"
-            android:paddingHorizontal="20dp"
-            android:paddingVertical="20dp"
-            android:background="@drawable/card_white"
-            >
+            <RelativeLayout
+                android:id="@+id/card3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/card1"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_centerHorizontal="true"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="20dp"
+                android:background="@drawable/card_white"
+                >
 
             <TextView
                 android:id="@+id/card3_titulo"

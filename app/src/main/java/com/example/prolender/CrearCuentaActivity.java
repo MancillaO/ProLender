@@ -22,6 +22,10 @@ public class CrearCuentaActivity extends AppCompatActivity {
             miIntent = new Intent(CrearCuentaActivity.this, MainActivity.class);
         }
 
+        if (id == R.id.btnContinuar) {
+            miIntent = new Intent(CrearCuentaActivity.this, HomeActivity.class);
+        }
+
         if (miIntent != null) {
             startActivity(miIntent);
         } else {

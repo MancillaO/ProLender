@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="#ffffff"
     tools:context=".ConfigFragment">
 
     <TextView
@@ -12,7 +12,7 @@
         android:text="Configuración"
         android:layout_gravity="center"
         android:textSize="40dp"
-        android:textColor="#ffffff"
+        android:textColor="#9488de"
         android:textStyle="bold"/>
 
 </FrameLayout>

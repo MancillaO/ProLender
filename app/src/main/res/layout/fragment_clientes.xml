@@ -1,18 +1,463 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
-    tools:context=".ClientesFragment">
+    tools:context=".ClientesActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Clientes"
-        android:layout_gravity="center"
-        android:textSize="40.5dp"
-        android:textColor="#ffffff"
-        android:textStyle="bold"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E9E9E9"
+        tools:context=".HomeActivity">
+
+        <RelativeLayout
+            android:id="@+id/topbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background_circle">
+
+            <TextView
+                android:id="@+id/txtTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="12dp"
+                android:layout_marginLeft="20dp"
+                android:text="ProLender"
+                android:textColor="#ffffff"
+                android:textSize="32sp"
+                android:textStyle="bold"
+
+                />
+
+            <TextView
+                android:id="@+id/txtUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="19dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/IconUser"
+                android:text="Admin"
+                android:textColor="#ffffff"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:id="@+id/IconUser"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginVertical="10dp"
+                android:layout_marginRight="20dp"
+                android:onClick="onClick"
+                android:src="@drawable/icon_user" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/add_cliente"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/topbar"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/card_border"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="10dp">
+
+            <TextView
+                android:id="@+id/txt_add_cliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Agregar \nCliente"
+                android:textColor="#9488de"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:id="@+id/add_cliente_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:onClick="onClick"
+                android:src="@drawable/icon_add_cliente" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/buscar_cliente"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/topbar"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/card_border"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="10dp">
+
+            <TextView
+                android:id="@+id/txt_buscar_cliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Buscar \nCliente"
+                android:textColor="#9488de"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:id="@+id/buscar_cliente_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:onClick="onClick"
+                android:src="@drawable/icon_buscar_cliente" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/cliente1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/add_cliente"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/card_white"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="20dp">
+
+            <TextView
+                android:id="@+id/cliente_titulo1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edgar Omar Mancilla Vaca"
+                android:textColor="#000000"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/cliente_titulo1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/background" />
+
+            <TextView
+                android:id="@+id/tituloCorreo1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cliente_titulo1"
+                android:layout_marginTop="15dp"
+                android:text="Correo:"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtCorreo1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cliente_titulo1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@id/tituloCorreo1"
+                android:text="edgarmncllav04@gmail.com"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tituloTelefono1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tituloCorreo1"
+                android:layout_marginTop="5dp"
+                android:text="Telefono:"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtTelefono1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tituloCorreo1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/tituloTelefono1"
+                android:text="5511343686"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tituloPrestamos1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tituloTelefono1"
+                android:layout_marginTop="5dp"
+                android:text="Prestamos Activos:"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPrestamos1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tituloTelefono1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/tituloPrestamos1"
+                android:text="2"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txtDetalles1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tituloPrestamos1"
+                android:layout_marginTop="8dp"
+                android:text="Ver Detalles"
+                android:textColor="#9488de"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/cliente2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cliente1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/card_white"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="20dp">
+
+            <TextView
+                android:id="@+id/cliente_titulo2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="David Brian Prudencio Godínez"
+                android:textColor="#000000"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/cliente_titulo2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/background" />
+
+            <TextView
+                android:id="@+id/tituloCorreo2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cliente_titulo2"
+                android:layout_marginTop="15dp"
+                android:text="Correo:"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtCorreo2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cliente_titulo2"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@id/tituloCorreo2"
+                android:text="davidprudenciog@gmail.com"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tituloTelefono2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tituloCorreo2"
+                android:layout_marginTop="5dp"
+                android:text="Telefono:"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtTelefono2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tituloCorreo2"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/tituloTelefono2"
+                android:text="5588107708"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tituloPrestamos2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tituloTelefono2"
+                android:layout_marginTop="5dp"
+                android:text="Prestamos Activos:"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPrestamos2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tituloTelefono2"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/tituloPrestamos2"
+                android:text="1"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txtDetalles2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tituloPrestamos2"
+                android:layout_marginTop="8dp"
+                android:text="Ver Detalles"
+                android:textColor="#9488de"
+                android:textSize="18sp"
+                
+                android:textStyle="italic"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/cliente3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cliente2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/card_white"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="20dp">
+
+            <TextView
+                android:id="@+id/cliente_titulo3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Leonardo Daniel Tellez Salas"
+                android:textColor="#000000"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/cliente_titulo3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/background" />
+
+            <TextView
+                android:id="@+id/tituloCorreo3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cliente_titulo3"
+                android:layout_marginTop="15dp"
+                android:text="Correo:"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtCorreo3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cliente_titulo3"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@id/tituloCorreo3"
+                android:text="tellezsalasleo@gmail.com"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tituloTelefono3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tituloCorreo3"
+                android:layout_marginTop="5dp"
+                android:text="Telefono:"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtTelefono3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tituloCorreo3"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/tituloTelefono3"
+                android:text="5561978352"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tituloPrestamos3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tituloTelefono3"
+                android:layout_marginTop="5dp"
+                android:text="Prestamos Activos:"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPrestamos3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tituloTelefono3"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/tituloPrestamos3"
+                android:text="4"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txtDetalles3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tituloPrestamos3"
+                android:layout_marginTop="8dp"
+                android:text="Ver Detalles"
+                android:textColor="#9488de"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
 
 </FrameLayout>
