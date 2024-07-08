@@ -61,7 +61,7 @@
             android:layout_below="@id/buscar_prestamo"
             android:layout_marginTop="20dp"
             android:background="@drawable/background_circle"
-            android:paddingHorizontal="90dp"
+            android:paddingHorizontal="80dp"
             android:paddingVertical="10dp"
             android:layout_marginHorizontal="20dp"
             android:clickable="true"

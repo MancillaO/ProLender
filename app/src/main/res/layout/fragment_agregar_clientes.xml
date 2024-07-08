@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AgregarClientesFragment">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E9E9E9"
+        tools:context=".AgregarClientesFragment"
+        >
+
+        <RelativeLayout
+            android:id="@+id/topbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:background="@drawable/background_circle"
+            >
+
+            <TextView
+                android:id="@+id/txtTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nuevo Cliente"
+                android:textSize="22sp"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="20dp"
+                android:layout_centerVertical="true"
+                android:textStyle="bold"
+                />
+
+            <ImageView
+                android:id="@+id/IconUser"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_cliente"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                />
+
+        </RelativeLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/topbar"
+
+            >
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal"
+                >
+
+                <TextView
+                    android:id="@+id/txtDatosPersonales"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Datos personales"
+                    android:textSize="28dp"
+                    android:textColor="@color/primary_color"
+                    android:textStyle="bold"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginVertical="25dp"
+                    android:layout_gravity="center"
+
+                    />
+
+
+                <EditText
+                    android:id="@+id/campoNombre"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Nombre(s) del Cliente"
+                    android:inputType="textPersonName"
+                    android:textColor="#534B85"
+                    android:paddingVertical="12dp"
+                    android:paddingHorizontal="20dp"
+                    android:background="@drawable/border_edittext_background"
+                    android:layout_gravity="center"
+                    />
+
+
+                <EditText
+                    android:id="@+id/campoAppat"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Apellido Paterno"
+                    android:layout_marginTop="25dp"
+                    android:inputType="textPersonName"
+                    android:textColor="#534B85"
+                    android:paddingVertical="12dp"
+                    android:paddingHorizontal="20dp"
+                    android:background="@drawable/border_edittext_background"
+                    android:layout_gravity="center"
+
+                    />
+
+                <EditText
+                    android:id="@+id/campoAmat"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Apellido Materno"
+                    android:layout_marginTop="25dp"
+                    android:inputType="textPersonName"
+                    android:textColor="#534B85"
+                    android:paddingVertical="12dp"
+                    android:paddingHorizontal="20dp"
+                    android:background="@drawable/border_edittext_background"
+                    android:layout_gravity="center"
+                    />
+
+                <EditText
+                    android:id="@+id/campoFecha"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Fecha de Nacimiento: dd/mm/yyyy"
+                    android:layout_marginTop="25dp"
+                    android:inputType="date"
+                    android:textColor="#534B85"
+                    android:paddingVertical="12dp"
+                    android:paddingHorizontal="20dp"
+                    android:background="@drawable/border_edittext_background"
+                    android:layout_gravity="center"
+                    />
+
+
+                <EditText
+                    android:id="@+id/campoCorreo"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Correo Electronico"
+                    android:layout_marginTop="25dp"
+                    android:inputType="textEmailAddress"
+                    android:textColor="#534B85"
+                    android:paddingVertical="12dp"
+                    android:paddingHorizontal="20dp"
+                    android:background="@drawable/border_edittext_background"
+                    android:layout_gravity="center"
+                    />
+
+                <EditText
+                    android:id="@+id/campoNumero"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Número de Telefono"
+                    android:layout_marginTop="25dp"
+                    android:inputType="phone"
+                    android:textColor="#534B85"
+                    android:paddingVertical="12dp"
+                    android:paddingHorizontal="20dp"
+                    android:background="@drawable/border_edittext_background"
+                    android:layout_gravity="center"
+
+                    />
+
+                <EditText
+                    android:id="@+id/campoRFC"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="RFC"
+                    android:layout_marginTop="25dp"
+                    android:inputType="text"
+                    android:textColor="#534B85"
+                    android:paddingVertical="12dp"
+                    android:paddingHorizontal="20dp"
+                    android:background="@drawable/border_edittext_background"
+                    android:layout_gravity="center"
+
+                    />
+
+                <EditText
+                    android:id="@+id/campoOcupación"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Ocupación"
+                    android:layout_marginTop="25dp"
+                    android:inputType="text"
+                    android:textColor="#534B85"
+                    android:paddingVertical="12dp"
+                    android:paddingHorizontal="20dp"
+                    android:background="@drawable/border_edittext_background"
+                    android:layout_gravity="center"
+                    />
+
+                <EditText
+                    android:id="@+id/campoIngreso"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Ingreso Mensual"
+                    android:layout_marginTop="25dp"
+                    android:inputType="number"
+                    android:textColor="#534B85"
+                    android:paddingVertical="12dp"
+                    android:paddingHorizontal="20dp"
+                    android:background="@drawable/border_edittext_background"
+                    android:layout_gravity="center"
+
+                    />
+
+                <TextView
+                    android:id="@+id/txtDireccion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dirección"
+                    android:textSize="28dp"
+                    android:textColor="@color/primary_color"
+                    android:textStyle="bold"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginVertical="25dp"
+                    android:layout_gravity="center"
+                    />
+
+                <EditText
+                    android:id="@+id/campoEstado"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Estado"
+                    android:inputType="text"
+                    android:textColor="#534B85"
+                    android:paddingVertical="12dp"
+                    android:paddingHorizontal="20dp"
+                    android:background="@drawable/border_edittext_background"
+                    android:layout_gravity="center"
+                    />
+
+                <EditText
+                    android:id="@+id/campoColonia"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Colonia"
+                    android:layout_marginTop="25dp"
+                    android:inputType="text"
+                    android:textColor="#534B85"
+                    android:paddingVertical="12dp"
+                    android:paddingHorizontal="20dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/border_edittext_background"
+                    />
+
+                <EditText
+                    android:id="@+id/campoCalle"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Calle"
+                    android:layout_marginTop="25dp"
+                    android:inputType="text"
+                    android:textColor="#534B85"
+                    android:paddingVertical="12dp"
+                    android:paddingHorizontal="20dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/border_edittext_background"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <EditText
+                        android:id="@+id/campoNumInt"
+                        android:layout_width="135dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="N. Interior"
+                        android:layout_marginTop="25dp"
+                        android:inputType="text"
+                        android:textColor="#534B85"
+                        android:paddingVertical="12dp"
+                        android:paddingHorizontal="20dp"
+                        android:background="@drawable/border_edittext_background"
+                        />
+
+                    <EditText
+                        android:id="@+id/campoNumExt"
+                        android:layout_width="135dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="N. Exterior"
+                        android:layout_marginTop="25dp"
+                        android:inputType="text"
+                        android:textColor="#534B85"
+                        android:paddingVertical="12dp"
+                        android:paddingHorizontal="20dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/border_edittext_background"
+                        />
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/campoCP"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Código Postal"
+                    android:layout_marginTop="25dp"
+                    android:inputType="text"
+                    android:textColor="#534B85"
+                    android:paddingVertical="12dp"
+                    android:paddingHorizontal="20dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/border_edittext_background"
+                    />
+
+                <EditText
+                    android:id="@+id/campoTpPropiedad"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="TP Propiedad"
+                    android:layout_marginTop="25dp"
+                    android:inputType="text"
+                    android:textColor="#534B85"
+                    android:paddingVertical="12dp"
+                    android:paddingHorizontal="20dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/border_edittext_background"
+                    />
+
+
+                <Button
+                    android:id="@+id/btnContinuar"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:text="Registrar"
+                    android:onClick="onClick"
+                    android:backgroundTint="#9488de"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#ffffff"
+                    android:textSize="16dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="15dp"
+                    android:padding="12dp"
+                    android:layout_gravity="center"
+                    />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+</FrameLayout>

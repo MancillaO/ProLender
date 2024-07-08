@@ -5,8 +5,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
-import android.widget.Toast;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 public class ClientesFragment extends Fragment implements View.OnClickListener {
 
@@ -32,7 +33,13 @@ public class ClientesFragment extends Fragment implements View.OnClickListener {
         int id = v.getId();
 
         if (id == R.id.add_cliente) {
-            Toast.makeText(getContext(), "Agregar nuevo cliente", Toast.LENGTH_SHORT).show();
+            // Reemplazar este fragmento con el formulario de agregar cliente
+            Fragment agregarClienteFragment = new AgregarClientesFragment();
+            FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.frameLayout, agregarClienteFragment);
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
         }
     }
 }
