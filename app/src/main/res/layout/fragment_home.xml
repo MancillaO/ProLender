@@ -111,7 +111,7 @@
             android:layout_height="wrap_content"
             android:text="Activos"
             android:textSize="30sp"
-            android:textColor="#481089"
+            android:textColor="@color/secondary_color"
             android:textStyle="bold"
             />
 
@@ -149,7 +149,7 @@
                 android:layout_height="wrap_content"
                 android:text="Atrasados"
                 android:textSize="30sp"
-                android:textColor="#481089"
+                android:textColor="@color/secondary_color"
                 android:textStyle="bold"
                 />
 
@@ -186,7 +186,7 @@
                 android:layout_height="wrap_content"
                 android:text="Monto total prestado"
                 android:textSize="30sp"
-                android:textColor="#481089"
+                android:textColor="@color/secondary_color"
                 android:textStyle="bold"
                 />
 

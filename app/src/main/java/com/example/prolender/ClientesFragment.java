@@ -12,6 +12,7 @@ import androidx.fragment.app.FragmentTransaction;
 public class ClientesFragment extends Fragment implements View.OnClickListener {
 
     private RelativeLayout btnAgregar;
+    private RelativeLayout btnAgregarS;
 
     public ClientesFragment() {
         // Required empty public constructor
@@ -20,11 +21,13 @@ public class ClientesFragment extends Fragment implements View.OnClickListener {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+
         View view = inflater.inflate(R.layout.fragment_clientes, container, false);
 
         btnAgregar = view.findViewById(R.id.add_cliente);
         btnAgregar.setOnClickListener(this);
+        btnAgregarS = view.findViewById(R.id.add_solicitud);
+        btnAgregarS.setOnClickListener(this);
         return view;
     }
 
@@ -33,11 +36,19 @@ public class ClientesFragment extends Fragment implements View.OnClickListener {
         int id = v.getId();
 
         if (id == R.id.add_cliente) {
-            // Reemplazar este fragmento con el formulario de agregar cliente
             Fragment agregarClienteFragment = new AgregarClientesFragment();
             FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.frameLayout, agregarClienteFragment);
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
+        }
+
+        if (id == R.id.add_solicitud) {
+            Fragment agregarSolicitudFragment = new AgregarSolicitudFragment();
+            FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.frameLayout, agregarSolicitudFragment);
             fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
         }

@@ -78,7 +78,7 @@
         android:layout_height="wrap_content"
         android:text="Continuar"
         android:onClick="onClick"
-        android:backgroundTint="#6755C3"
+        android:backgroundTint="@color/secondary_color"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:textColor="#ffffff"

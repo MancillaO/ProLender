@@ -9,9 +9,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-public class AgregarClientesFragment extends Fragment {
+public class AgregarDireccionFragment extends Fragment {
 
-    public AgregarClientesFragment() {
+    public AgregarDireccionFragment() {
         // Required empty public constructor
     }
 
@@ -19,16 +19,16 @@ public class AgregarClientesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_agregar_clientes, container, false);
+        View view = inflater.inflate(R.layout.fragment_agregar_direccion, container, false);
 
-        Button btnContinuar = view.findViewById(R.id.btnContinuar);
-        btnContinuar.setOnClickListener(new View.OnClickListener() {
+        Button btnRegistrar = view.findViewById(R.id.btnRegistrar);
+        btnRegistrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Fragment agregarDireccionFragment = new AgregarDireccionFragment();
+                Fragment clientesFragment = new ClientesFragment();
                 FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.frameLayout, agregarDireccionFragment);
+                fragmentTransaction.replace(R.id.frameLayout, clientesFragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
