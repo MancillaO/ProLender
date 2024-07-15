@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AgregarSolicitudFragment">
+    tools:context=".VerSolicitudFragment">
 
     <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -11,14 +11,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#E9E9E9"
-        tools:context=".AgregarSolicitudFragment"
+        tools:context=".VerSolicitudFragment"
         >
 
         <RelativeLayout
             android:id="@+id/topbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="20dp"
             android:layout_marginHorizontal="20dp"
             android:paddingVertical="10dp"
             android:background="@drawable/background_circle"
@@ -28,7 +28,7 @@
                 android:id="@+id/txtTitulo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Datos Personales"
+                android:text="Ver Solicitud"
                 android:textSize="22sp"
                 android:textColor="#ffffff"
                 android:layout_marginLeft="20dp"
@@ -37,17 +37,16 @@
                 />
 
             <ImageView
-                android:id="@+id/IconSolicitud"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:id="@+id/IconUser"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
                 android:layout_centerVertical="true"
-                android:src="@drawable/icon_add_solicitud"
+                android:src="@drawable/icon_prestamo"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="20dp"
                 />
 
         </RelativeLayout>
-
 
         <ScrollView
             android:layout_width="match_parent"
@@ -109,7 +108,7 @@
                 </RelativeLayout>
 
                 <EditText
-                    android:id="@+id/campoMonto"
+                    android:id="@+id/campoMontoS"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -138,14 +137,74 @@
                     android:layout_gravity="center"
                     />
 
+                <EditText
+                    android:id="@+id/campoMontoA"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Monto Aprovado"
+                    android:layout_marginTop="25dp"
+                    android:inputType="textPersonName"
+                    android:textColor="#1D2262"
+                    android:paddingVertical="12dp"
+                    android:paddingHorizontal="20dp"
+                    android:background="@drawable/border_edittext_background"
+                    android:layout_gravity="center"
+                    />
+
+                <EditText
+                    android:id="@+id/campoDictamen"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Dictamen"
+                    android:layout_marginTop="25dp"
+                    android:inputType="textPersonName"
+                    android:textColor="#1D2262"
+                    android:paddingVertical="12dp"
+                    android:paddingHorizontal="20dp"
+                    android:background="@drawable/border_edittext_background"
+                    android:layout_gravity="center"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+
+                    >
+
+                    <EditText
+                        android:id="@+id/campoFechaD"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="Fecha Dictamen"
+                        android:inputType="textPersonName"
+                        android:textColor="#1D2262"
+                        android:paddingVertical="12dp"
+                        android:paddingHorizontal="20dp"
+                        android:background="@drawable/border_edittext_background"
+                        />
+
+                    <ImageView
+                        android:id="@+id/selectDateButtonD"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/icon_calendar"
+                        android:layout_alignParentRight="true"
+                        android:onClick="onClick"
+                        />
+                </RelativeLayout>
             </LinearLayout>
         </ScrollView>
 
         <Button
-            android:id="@+id/btnRegistrar"
+            android:id="@+id/btnAprovar"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:text="Registrar"
+            android:text="Aprovar"
             android:onClick="onClick"
             android:backgroundTint="@color/primary_color"
             android:layout_centerHorizontal="true"
@@ -156,5 +215,8 @@
             android:padding="12dp"
             android:layout_gravity="center"
             />
+
+
     </RelativeLayout>
+
 </FrameLayout>

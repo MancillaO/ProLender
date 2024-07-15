@@ -1,18 +1,25 @@
 package com.example.prolender;
 
+import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
+
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-public class AgregarDireccionFragment extends Fragment {
+import java.util.Calendar;
 
-    public AgregarDireccionFragment() {
+public class DepositarFragment extends Fragment implements View.OnClickListener{
+
+    public DepositarFragment() {
         // Required empty public constructor
     }
 
@@ -20,22 +27,27 @@ public class AgregarDireccionFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_agregar_direccion, container, false);
+        View view = inflater.inflate(R.layout.fragment_depositar, container, false);
 
-        Button btnRegistrar = view.findViewById(R.id.btnRegistrar);
+        Button btnRegistrar = view.findViewById(R.id.btnDepositar);
         btnRegistrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Fragment clientesFragment = new ClientesFragment();
+                Fragment prestamosFragment = new PrestamosFragment();
                 FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.frameLayout, clientesFragment);
+                fragmentTransaction.replace(R.id.frameLayout, prestamosFragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
         });
 
         return view;
+    }
+
+    @Override
+    public void onClick(View v) {
 
     }
 }
+

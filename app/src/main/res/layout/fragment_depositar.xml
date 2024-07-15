@@ -1,58 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AgregarSolicitudFragment">
+    tools:context=".PrestamosFragment">
 
     <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#E9E9E9"
-        tools:context=".AgregarSolicitudFragment"
-        >
+        tools:context=".PrestamosFragment">
 
         <RelativeLayout
-            android:id="@+id/topbar"
+            android:id="@+id/buscar_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
             android:layout_marginHorizontal="20dp"
-            android:paddingVertical="10dp"
-            android:background="@drawable/background_circle"
-            >
+            android:background="@drawable/card_border"
+            android:paddingHorizontal="17dp"
+            android:paddingVertical="7dp"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:longClickable="true">
 
-            <TextView
-                android:id="@+id/txtTitulo"
-                android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/editextBuscar"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:text="Datos Personales"
-                android:textSize="22sp"
-                android:textColor="#ffffff"
-                android:layout_marginLeft="20dp"
-                android:layout_centerVertical="true"
+                android:ems="10"
+                android:hint="ID Cliente"
                 android:textStyle="bold"
+                android:inputType="text"
+                android:layout_centerVertical="true"
+                android:paddingLeft="15dp"
+                android:textColorHint="#908DB6"
+                android:textColor="#000000"
+                android:background="@drawable/buscar_edittext_background"
                 />
 
             <ImageView
-                android:id="@+id/IconSolicitud"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_centerVertical="true"
-                android:src="@drawable/icon_add_solicitud"
+                android:id="@+id/buscar_cliente_icon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/icon_buscar_prestamos"
+                android:onClick="onClick"
                 />
-
         </RelativeLayout>
 
+        <ImageView
+            android:id="@+id/icon_cliente_cobrar"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/icon_depositar_cliente"
+            android:layout_below="@id/buscar_id"/>
 
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/topbar"
+            android:layout_below="@id/icon_cliente_cobrar"
             android:layout_marginTop="40dp"
             >
 
@@ -64,56 +77,26 @@
                 >
 
                 <EditText
-                    android:id="@+id/campoOcupacion"
-                    android:layout_width="300dp"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Ocupación"
-                    android:inputType="text"
-                    android:textColor="#1D2262"
-                    android:paddingVertical="12dp"
-                    android:paddingHorizontal="20dp"
-                    android:background="@drawable/border_edittext_background"
-                    android:layout_gravity="center"
-                    />
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="25dp"
-
-                    >
-
-                    <EditText
-                        android:id="@+id/campoFecha"
-                        android:layout_width="250dp"
-                        android:layout_height="wrap_content"
-                        android:ems="10"
-                        android:hint="dd/mm/aaaa"
-                        android:inputType="textPersonName"
-                        android:textColor="#1D2262"
-                        android:paddingVertical="12dp"
-                        android:paddingHorizontal="20dp"
-                        android:background="@drawable/border_edittext_background"
-                        />
-
-                    <ImageView
-                        android:id="@+id/selectDateButton"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_centerVertical="true"
-                        android:src="@drawable/icon_calendar"
-                        android:layout_alignParentRight="true"
-                        android:onClick="onClick"
-                        />
-                </RelativeLayout>
-
-                <EditText
                     android:id="@+id/campoMonto"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:hint="Monto Solicitado"
+                    android:hint="Monto"
+                    android:inputType="number"
+                    android:textColor="#1D2262"
+                    android:paddingVertical="12dp"
+                    android:paddingHorizontal="20dp"
+                    android:background="@drawable/border_edittext_background"
+                    android:layout_gravity="center"
+                    />
+
+
+                <EditText
+                    android:id="@+id/campoTipoPago"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Tipo de Pago"
                     android:layout_marginTop="25dp"
                     android:inputType="textPersonName"
                     android:textColor="#1D2262"
@@ -124,37 +107,42 @@
                     />
 
                 <EditText
-                    android:id="@+id/campoIngreso"
+                    android:id="@+id/campoMontoA"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:hint="Ingreso Mensual"
+                    android:hint="Total a Pagar"
                     android:layout_marginTop="25dp"
-                    android:inputType="textPersonName"
+                    android:inputType="number"
                     android:textColor="#1D2262"
                     android:paddingVertical="12dp"
                     android:paddingHorizontal="20dp"
                     android:background="@drawable/border_edittext_background"
                     android:layout_gravity="center"
                     />
+
+
 
             </LinearLayout>
         </ScrollView>
 
         <Button
-            android:id="@+id/btnRegistrar"
+            android:id="@+id/btnDepositar"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:text="Registrar"
+            android:text="Depositar"
             android:onClick="onClick"
             android:backgroundTint="@color/primary_color"
             android:layout_centerHorizontal="true"
             android:textColor="#ffffff"
             android:textSize="16dp"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="30dp"
+            android:layout_marginBottom="40dp"
             android:padding="12dp"
             android:layout_gravity="center"
             />
+
+
     </RelativeLayout>
+
 </FrameLayout>

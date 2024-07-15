@@ -53,44 +53,77 @@
                 />
         </RelativeLayout>
 
-
         <RelativeLayout
-            android:id="@+id/add_prestamo"
-            android:layout_width="match_parent"
+            android:id="@+id/ver_solicitud"
+            android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/buscar_prestamo"
             android:layout_marginTop="20dp"
             android:background="@drawable/background_circle"
-            android:paddingHorizontal="80dp"
+            android:paddingHorizontal="20dp"
             android:paddingVertical="10dp"
-            android:layout_marginHorizontal="20dp"
             android:clickable="true"
+            android:layout_marginStart="20dp"
             android:focusable="true">
 
             <TextView
-                android:id="@+id/txt_add_cliente"
+                android:id="@+id/txt_add_solicitud"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:text="Agregar Prestamo"
+                android:text="Ver \nSolicitud"
                 android:textColor="#ffffff"
                 android:textSize="20sp"
                 android:textStyle="bold"/>
 
             <ImageView
-                android:id="@+id/add_cliente_icon"
+                android:id="@+id/add_solicitud_icon"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:src="@drawable/icon_add_prestamo" />
+                android:src="@drawable/icon_add_solicitud" />
         </RelativeLayout>
 
-        <!-- Sección para la lista de préstamos -->
+
+        <RelativeLayout
+            android:id="@+id/cobro_deposito"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buscar_prestamo"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background_circle"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:clickable="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="20dp"
+            android:focusable="true">
+
+
+            <TextView
+                android:id="@+id/txt_cobro_deposito"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Cobro o \nDeposito"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/cobro_deposito_icon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_cobro_deposito" />
+        </RelativeLayout>
+
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/add_prestamo"
+            android:layout_below="@id/ver_solicitud"
             >
 
             <LinearLayout
@@ -99,14 +132,12 @@
                 android:orientation="vertical"
                 android:paddingBottom="20dp">
 
-                <!-- Reemplazar este bloque para cada préstamo -->
-
                 <RelativeLayout
                     android:id="@+id/prestamo1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="15dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="20dp"
                     android:background="@drawable/card_white"
                     android:paddingHorizontal="20dp"
                     android:paddingVertical="20dp">
@@ -183,7 +214,7 @@
                         android:layout_below="@id/tituloRestante1"
                         android:layout_marginTop="8dp"
                         android:text="Ver Detalles"
-                        android:textColor="#9488de"
+                        android:textColor="@color/secondary_color"
                         android:textSize="18sp"
                         android:textStyle="italic"
                         android:clickable="true"
@@ -271,7 +302,7 @@
                         android:layout_below="@id/tituloRestante2"
                         android:layout_marginTop="8dp"
                         android:text="Ver Detalles"
-                        android:textColor="#9488de"
+                        android:textColor="@color/secondary_color"
                         android:textSize="18sp"
                         android:textStyle="italic"
                         android:clickable="true"
@@ -359,7 +390,7 @@
                         android:layout_below="@id/tituloRestante3"
                         android:layout_marginTop="8dp"
                         android:text="Ver Detalles"
-                        android:textColor="#9488de"
+                        android:textColor="@color/secondary_color"
                         android:textSize="18sp"
                         android:textStyle="italic"
                         android:clickable="true"
@@ -447,18 +478,17 @@
                         android:layout_below="@id/tituloRestante4"
                         android:layout_marginTop="8dp"
                         android:text="Ver Detalles"
-                        android:textColor="#9488de"
+                        android:textColor="@color/secondary_color"
                         android:textSize="18sp"
                         android:textStyle="italic"
                         android:clickable="true"
                         android:onClick="onClick"/>
 
                 </RelativeLayout>
-              <!-- Fin del bloque de préstamo -->
 
             </LinearLayout>
         </ScrollView>
 
-    </RelativeLayout>
+        </RelativeLayout>
 
-</FrameLayout>
+    </FrameLayout>

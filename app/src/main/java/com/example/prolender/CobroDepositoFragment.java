@@ -1,22 +1,28 @@
 package com.example.prolender;
 
+import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-public class PrestamosFragment extends Fragment implements View.OnClickListener {
+import java.util.Calendar;
 
-    private RelativeLayout btnAgregar;
-    private RelativeLayout btnCD;
+public class CobroDepositoFragment extends Fragment implements View.OnClickListener{
 
+    private RelativeLayout btnDepositar;
+    private RelativeLayout btnCobrar;
 
-    public PrestamosFragment() {
+    public CobroDepositoFragment() {
         // Required empty public constructor
     }
 
@@ -24,12 +30,12 @@ public class PrestamosFragment extends Fragment implements View.OnClickListener 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_prestamos, container, false);
+        View view = inflater.inflate(R.layout.fragment_cobro_deposito, container, false);
 
-        btnAgregar = view.findViewById(R.id.ver_solicitud);
-        btnAgregar.setOnClickListener(this);
-        btnCD = view.findViewById(R.id.cobro_deposito);
-        btnCD.setOnClickListener(this);
+        btnDepositar = view.findViewById(R.id.btnDepositar);
+        btnDepositar.setOnClickListener(this);
+        btnCobrar = view.findViewById(R.id.btnCobrar);
+        btnCobrar.setOnClickListener(this);
 
         return view;
     }
@@ -38,24 +44,25 @@ public class PrestamosFragment extends Fragment implements View.OnClickListener 
     public void onClick(View v) {
         int id = v.getId();
 
-        if (id == R.id.ver_solicitud) {
-            VerSolicitudFragment verSolicitudFragment = new VerSolicitudFragment();
+        if (id == R.id.btnDepositar) {
+            DepositarFragment depositarFragment = new DepositarFragment();
 
             FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
             FragmentTransaction transaction = fragmentManager.beginTransaction();
-            transaction.replace(R.id.frameLayout, verSolicitudFragment);
+            transaction.replace(R.id.frameLayout, depositarFragment);
             transaction.addToBackStack(null);
             transaction.commit();
         }
 
-        if (id == R.id.cobro_deposito) {
-            CobroDepositoFragment cobroDepositoFragment = new CobroDepositoFragment();
+        if (id == R.id.btnCobrar) {
+            CobrarFragment cobrarFragment = new CobrarFragment();
 
             FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
             FragmentTransaction transaction = fragmentManager.beginTransaction();
-            transaction.replace(R.id.frameLayout, cobroDepositoFragment);
+            transaction.replace(R.id.frameLayout, cobrarFragment);
             transaction.addToBackStack(null);
             transaction.commit();
         }
     }
 }
+

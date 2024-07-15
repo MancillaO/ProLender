@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CobroDepositoFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E9E9E9"
+        tools:context=".CobroDepositoFragment">
+
+        <RelativeLayout
+            android:id="@+id/topbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:background="@drawable/background_circle"
+            >
+
+            <TextView
+                android:id="@+id/txtTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pagos"
+                android:textSize="22sp"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="20dp"
+                android:layout_centerVertical="true"
+                android:textStyle="bold"
+                />
+
+            <ImageView
+                android:id="@+id/IconUser"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_cobro_deposito"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/icono2"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/icon_cobro_deposito2"
+            android:layout_below="@id/topbar"/>
+
+        <RelativeLayout
+            android:id="@+id/btnDepositar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/btnCobrar"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:background="@drawable/card_border"
+            android:paddingVertical="15dp"
+            android:layout_marginHorizontal="50dp"
+            android:clickable="true"
+            android:focusable="true"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Depositar"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/secondary_color"
+                />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btnCobrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="100dp"
+            android:gravity="center"
+            android:background="@drawable/card_border"
+            android:paddingVertical="15dp"
+            android:layout_marginHorizontal="50dp"
+            android:clickable="true"
+            android:focusable="true"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cobrar"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/secondary_color"
+                />
+
+
+        </RelativeLayout>
+
+
+
+
+
+    </RelativeLayout>
+
+</FrameLayout>
