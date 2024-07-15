@@ -19,22 +19,35 @@ import java.util.Calendar;
 
 public class CobrarFragment extends Fragment implements View.OnClickListener{
 
+    private RelativeLayout btnPagar;
+
     public CobrarFragment() {
-        // Required empty public constructor
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+
         View view = inflater.inflate(R.layout.fragment_cobrar, container, false);
+        btnPagar = view.findViewById(R.id.btnPagar);
+        btnPagar.setOnClickListener(this);
 
         return view;
     }
 
     @Override
     public void onClick(View v) {
+        int id = v.getId();
 
+        if (id == R.id.btnPagar) {
+            CobroDepositoFragment cobroDepositoFragment = new CobroDepositoFragment();
+
+            FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+            FragmentTransaction transaction = fragmentManager.beginTransaction();
+            transaction.replace(R.id.frameLayout, cobroDepositoFragment);
+            transaction.addToBackStack(null);
+            transaction.commit();
+        }
     }
 }
 
