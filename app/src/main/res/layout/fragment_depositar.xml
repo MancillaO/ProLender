@@ -56,16 +56,45 @@
         <ImageView
             android:id="@+id/icon_cliente_cobrar"
             android:layout_width="match_parent"
-            android:layout_height="250dp"
+            android:layout_height="200dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="30dp"
             android:src="@drawable/icon_depositar_cliente"
-            android:layout_below="@id/buscar_id"/>
+            android:layout_below="@id/buscar_id"
+            />
+
+
+        <TextView
+            android:id="@+id/txtNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre del Cliente"
+            android:layout_below="@id/icon_cliente_cobrar"
+            android:layout_centerHorizontal="true"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:background="@drawable/card_white"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="7dp"/>
+
+        <TextView
+            android:id="@+id/txtCorreo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Correo Electronico del Cliente"
+            android:layout_below="@id/txtNombre"
+            android:layout_centerHorizontal="true"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/card_white"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="7dp"/>
 
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/icon_cliente_cobrar"
+            android:layout_below="@id/txtCorreo"
             android:layout_marginTop="40dp"
             >
 

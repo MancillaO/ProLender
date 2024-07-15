@@ -33,10 +33,10 @@ public class DepositarFragment extends Fragment implements View.OnClickListener{
         btnRegistrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Fragment prestamosFragment = new PrestamosFragment();
+                Fragment cobroDepositoFragment = new CobroDepositoFragment();
                 FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.frameLayout, prestamosFragment);
+                fragmentTransaction.replace(R.id.frameLayout, cobroDepositoFragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
