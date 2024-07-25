@@ -150,26 +150,26 @@
                     android:layout_gravity="center"
                     />
 
+                <Button
+                    android:id="@+id/btnDepositar"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:text="Depositar"
+                    android:onClick="onClick"
+                    android:backgroundTint="@color/primary_color"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#ffffff"
+                    android:textSize="16dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="40dp"
+                    android:padding="12dp"
+                    android:layout_gravity="center"
+                    />
 
 
             </LinearLayout>
         </ScrollView>
 
-        <Button
-            android:id="@+id/btnDepositar"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:text="Depositar"
-            android:onClick="onClick"
-            android:backgroundTint="@color/primary_color"
-            android:layout_centerHorizontal="true"
-            android:textColor="#ffffff"
-            android:textSize="16dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="40dp"
-            android:padding="12dp"
-            android:layout_gravity="center"
-            />
 
 
     </RelativeLayout>
