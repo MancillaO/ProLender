@@ -64,7 +64,7 @@
                 >
 
                 <EditText
-                    android:id="@+id/campoOcupacion"
+                    android:id="@+id/campoOcupacionSoli"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -124,7 +124,7 @@
                     />
 
                 <EditText
-                    android:id="@+id/campoIngreso"
+                    android:id="@+id/campoIngresoSoli"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:ems="10"

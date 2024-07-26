@@ -286,7 +286,7 @@
                     />
 
                 <EditText
-                    android:id="@+id/campoIngreso"
+                    android:id="@+id/campoIngresoVerCliente"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:ems="10"

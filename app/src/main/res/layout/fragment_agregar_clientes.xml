@@ -172,7 +172,7 @@
                     />
 
                 <EditText
-                    android:id="@+id/campoOcupación"
+                    android:id="@+id/campoOcupacion"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -203,7 +203,7 @@
                     />
 
                 <Button
-                    android:id="@+id/btnContinuar"
+                    android:id="@+id/btnContinuarCliente"
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:text="Continuar"
