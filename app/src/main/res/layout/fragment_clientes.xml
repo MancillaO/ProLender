@@ -67,7 +67,7 @@
                 android:id="@+id/add_cliente"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.45"
+                android:layout_weight="0.47"
                 android:background="@drawable/background_circle"
                 android:paddingHorizontal="20dp"
                 android:paddingVertical="10dp"
@@ -98,13 +98,13 @@
             <Space
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.1" />
+                android:layout_weight="0.06" />
 
             <LinearLayout
                 android:id="@+id/add_solicitud"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.45"
+                android:layout_weight="0.47"
                 android:background="@drawable/background_circle"
                 android:paddingHorizontal="20dp"
                 android:paddingVertical="10dp"

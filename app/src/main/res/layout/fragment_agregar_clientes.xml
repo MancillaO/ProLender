@@ -169,27 +169,29 @@
                     android:paddingHorizontal="20dp"
                     android:background="@drawable/border_edittext_background"
                     android:layout_gravity="center"
-
-                    />
-
-                <Button
-                    android:id="@+id/btnContinuarCliente"
-                    android:layout_width="250dp"
-                    android:layout_height="wrap_content"
-                    android:text="Continuar"
-                    android:onClick="onClick"
-                    android:backgroundTint="@color/primary_color"
-                    android:layout_centerHorizontal="true"
-                    android:textColor="#ffffff"
-                    android:textSize="16dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="30dp"
-                    android:padding="12dp"
-                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
                     />
 
             </LinearLayout>
         </ScrollView>
+
+        <Button
+            android:id="@+id/btnContinuarCliente"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Continuar"
+            android:onClick="onClick"
+            android:backgroundTint="@color/primary_color"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ffffff"
+            android:textSize="16dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
+            android:padding="12dp"
+            android:layout_gravity="center"
+            />
+
+
     </RelativeLayout>
 </FrameLayout>
