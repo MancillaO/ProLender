@@ -250,56 +250,6 @@
                     />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Ocupación:"
-                    android:textColor="@color/primary_color"
-                    android:textStyle="bold"
-                    android:textSize="16dp"
-                    android:layout_marginTop="25dp"
-                    android:layout_marginBottom="10dp"
-                    />
-
-                <EditText
-                    android:id="@+id/campoOcupación"
-                    android:layout_width="300dp"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Ocupación"
-                    android:inputType="text"
-                    android:textColor="#1D2262"
-                    android:paddingVertical="12dp"
-                    android:paddingHorizontal="20dp"
-                    android:background="@drawable/border_edittext_background"
-                    android:layout_gravity="center"
-                    />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Ingreso Mensual:"
-                    android:textColor="@color/primary_color"
-                    android:textStyle="bold"
-                    android:textSize="16dp"
-                    android:layout_marginTop="25dp"
-                    android:layout_marginBottom="10dp"
-                    />
-
-                <EditText
-                    android:id="@+id/campoIngresoVerCliente"
-                    android:layout_width="300dp"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Ingreso Mensual"
-                    android:inputType="number"
-                    android:textColor="#1D2262"
-                    android:paddingVertical="12dp"
-                    android:paddingHorizontal="20dp"
-                    android:background="@drawable/border_edittext_background"
-                    android:layout_gravity="center"
-                    />
-
-                <TextView
                     android:id="@+id/txtDireccion"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

@@ -36,8 +36,6 @@ public class AgregarClientesFragment extends Fragment {
         email = view.findViewById(R.id.campoCorreo);
         tel = view.findViewById(R.id.campoNumero);
         rfc = view.findViewById(R.id.campoRFC);
-        ocupacion = view.findViewById(R.id.campoOcupacion);
-        ingreso = view.findViewById(R.id.campoIngreso);
 
 
         Button btnContinuar = view.findViewById(R.id.btnContinuarCliente);
@@ -53,9 +51,6 @@ public class AgregarClientesFragment extends Fragment {
                 fragmentTransaction.replace(R.id.frameLayout, agregarDireccionFragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
-
-
-
             }
         });
 

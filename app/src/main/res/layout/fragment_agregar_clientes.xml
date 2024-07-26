@@ -172,37 +172,6 @@
 
                     />
 
-                <EditText
-                    android:id="@+id/campoOcupacion"
-                    android:layout_width="300dp"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Ocupación"
-                    android:layout_marginTop="25dp"
-                    android:inputType="text"
-                    android:textColor="#1D2262"
-
-                    android:paddingVertical="12dp"
-                    android:paddingHorizontal="20dp"
-                    android:background="@drawable/border_edittext_background"
-                    android:layout_gravity="center"
-                    />
-
-                <EditText
-                    android:id="@+id/campoIngreso"
-                    android:layout_width="300dp"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Ingreso Mensual"
-                    android:layout_marginTop="25dp"
-                    android:inputType="number"
-                    android:textColor="#1D2262"
-                    android:paddingVertical="12dp"
-                    android:paddingHorizontal="20dp"
-                    android:background="@drawable/border_edittext_background"
-                    android:layout_gravity="center"
-                    />
-
                 <Button
                     android:id="@+id/btnContinuarCliente"
                     android:layout_width="250dp"
