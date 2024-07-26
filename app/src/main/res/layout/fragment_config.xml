@@ -63,137 +63,146 @@
             android:paddingHorizontal="20dp"
             android:paddingVertical="7dp"/>
 
-        <LinearLayout
+
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/config_border"
+            android:layout_height="wrap_content"
             android:layout_below="@id/txtUsuario"
             android:layout_marginTop="20dp"
-            android:orientation="vertical"
-            android:paddingHorizontal="25dp"
-            android:paddingVertical="30dp"
-            android:layout_centerVertical="true"
             >
 
             <LinearLayout
-                android:id="@+id/Config1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingHorizontal="15dp"
-                android:paddingVertical="15dp"
-                android:background="@drawable/card_white"
+                android:layout_height="match_parent"
+                android:background="@drawable/config_border"
+                android:orientation="vertical"
+                android:paddingHorizontal="25dp"
+                android:paddingVertical="30dp"
+                android:layout_centerVertical="true"
                 >
 
-                <TextView
-                    android:layout_width="0dp"
+                <LinearLayout
+                    android:id="@+id/Config1"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".85"
-                    android:text="Modo Oscuro"
-                    android:textSize="25sp"
-                    android:textStyle="bold"
-                    />
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="15dp"
+                    android:paddingVertical="15dp"
+                    android:background="@drawable/card_white"
+                    >
 
-                <Switch
-                    android:id="@+id/switchExample"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.15"
-                    android:checked="false"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".85"
+                        android:text="Modo Oscuro"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        />
 
-            </LinearLayout>
+                    <Switch
+                        android:id="@+id/switchExample"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.15"
+                        android:checked="false"/>
+
+                </LinearLayout>
 
 
-            <LinearLayout
-                android:id="@+id/Config2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="20dp"
-                android:layout_centerVertical="true"
-                android:paddingHorizontal="15dp"
-                android:paddingVertical="15dp"
-                android:background="@drawable/card_white">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight=".85"
-                    android:text="Editar Perfil"
-                    android:textSize="25sp"
-                    android:textStyle="bold"
-
-                    />
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="30dp"
-                    android:layout_weight=".15"
-                    android:src="@drawable/flecha"
-                    />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/Config3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="20dp"
-                android:layout_centerVertical="true"
-                android:paddingHorizontal="15dp"
-                android:paddingVertical="15dp"
-                android:background="@drawable/card_white">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight=".85"
-                    android:text="Fijar Intereses"
-                    android:textSize="25sp"
-                    android:textStyle="bold"
-                    />
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="30dp"
-                    android:layout_weight=".15"
-                    android:src="@drawable/flecha"
-                    />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:orientation="horizontal"
-                android:layout_marginTop="50dp"
-                android:paddingVertical="15dp"
-                android:paddingHorizontal="30dp"
-                android:background="@drawable/background_close"
-                >
-
-                <TextView
-                    android:layout_width="0dp"
+                <LinearLayout
+                    android:id="@+id/Config2"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".80"
-                    android:text="Cerrar Aplicación"
-                    android:textSize="22sp"
-                    android:textStyle="bold"
-                    android:textColor="#ffffff"
-                    />
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_centerVertical="true"
+                    android:paddingHorizontal="15dp"
+                    android:paddingVertical="15dp"
+                    android:background="@drawable/card_white">
 
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight=".20"
-                    android:src="@drawable/icon_cerrar"
-                    />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".85"
+                        android:text="Editar Perfil"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+
+                        />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight=".15"
+                        android:src="@drawable/flecha"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Config3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_centerVertical="true"
+                    android:paddingHorizontal="15dp"
+                    android:paddingVertical="15dp"
+                    android:background="@drawable/card_white">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".85"
+                        android:text="Fijar Intereses"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight=".15"
+                        android:src="@drawable/flecha"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="50dp"
+                    android:paddingVertical="15dp"
+                    android:paddingHorizontal="30dp"
+                    android:background="@drawable/background_close"
+                    >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".80"
+                        android:text="Cerrar Aplicación"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:textColor="#ffffff"
+                        />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".20"
+                        android:src="@drawable/icon_cerrar"
+                        />
+
+                </LinearLayout>
 
             </LinearLayout>
 
-        </LinearLayout>
+
+        </ScrollView>
 
     </RelativeLayout>
 

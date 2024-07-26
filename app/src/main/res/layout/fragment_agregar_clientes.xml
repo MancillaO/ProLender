@@ -53,7 +53,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/topbar"
-            android:layout_marginTop="20dp"
             >
 
             <LinearLayout
@@ -75,6 +74,8 @@
                     android:paddingHorizontal="20dp"
                     android:background="@drawable/border_edittext_background"
                     android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+
                     />
 
 
@@ -214,6 +215,7 @@
                     android:textSize="16dp"
                     android:layout_alignParentBottom="true"
                     android:layout_marginTop="15dp"
+                    android:layout_marginBottom="30dp"
                     android:padding="12dp"
                     android:layout_gravity="center"
                     />

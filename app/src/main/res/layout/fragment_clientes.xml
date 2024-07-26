@@ -137,7 +137,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/botones"
-            android:layout_marginTop="10dp"
             >
 
             <LinearLayout
@@ -152,7 +151,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_marginHorizontal="15dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="20dp"
                     android:background="@drawable/card_white"
                     android:paddingHorizontal="20dp"
                     android:paddingVertical="20dp">

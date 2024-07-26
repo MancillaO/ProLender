@@ -64,41 +64,12 @@
                 >
 
                 <EditText
-                    android:id="@+id/campoEstado"
-                    android:layout_width="300dp"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Estado"
-                    android:inputType="text"
-                    android:textColor="#534B85"
-                    android:paddingVertical="12dp"
-                    android:paddingHorizontal="20dp"
-                    android:background="@drawable/border_edittext_background"
-                    android:layout_gravity="center"
-                    />
-
-                <EditText
-                    android:id="@+id/campoColonia"
-                    android:layout_width="300dp"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Colonia"
-                    android:layout_marginTop="25dp"
-                    android:inputType="text"
-                    android:textColor="#534B85"
-                    android:paddingVertical="12dp"
-                    android:paddingHorizontal="20dp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/border_edittext_background"
-                    />
-
-                <EditText
                     android:id="@+id/campoCalle"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="Calle"
-                    android:layout_marginTop="25dp"
+
                     android:inputType="text"
                     android:textColor="#534B85"
                     android:paddingVertical="12dp"
@@ -151,6 +122,37 @@
 
                 </LinearLayout>
 
+                <EditText
+                    android:id="@+id/campoColonia"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Colonia"
+                    android:layout_marginTop="25dp"
+                    android:inputType="text"
+                    android:textColor="#534B85"
+                    android:paddingVertical="12dp"
+                    android:paddingHorizontal="20dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/border_edittext_background"
+                    />
+
+
+                <EditText
+                    android:id="@+id/campoEstado"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Estado"
+                    android:inputType="text"
+                    android:textColor="#534B85"
+                    android:paddingVertical="12dp"
+                    android:paddingHorizontal="20dp"
+                    android:background="@drawable/border_edittext_background"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="25dp"
+
+                    />
 
                 <EditText
                     android:id="@+id/campoCP"
@@ -196,6 +198,7 @@
                     android:layout_marginTop="15dp"
                     android:padding="12dp"
                     android:layout_gravity="center"
+                    android:layout_marginBottom="30dp"
                     />
 
 

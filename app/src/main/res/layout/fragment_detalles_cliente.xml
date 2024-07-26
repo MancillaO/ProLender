@@ -314,56 +314,6 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Estado:"
-                    android:textColor="@color/primary_color"
-                    android:textStyle="bold"
-                    android:textSize="16dp"
-                    android:layout_marginBottom="10dp"
-                    />
-
-
-                <EditText
-                    android:id="@+id/campoEstado"
-                    android:layout_width="300dp"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Estado"
-                    android:inputType="text"
-                    android:textColor="#534B85"
-                    android:paddingVertical="12dp"
-                    android:paddingHorizontal="20dp"
-                    android:background="@drawable/border_edittext_background"
-                    android:layout_gravity="center"
-                    />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Colonia:"
-                    android:textColor="@color/primary_color"
-                    android:textStyle="bold"
-                    android:textSize="16dp"
-                    android:layout_marginTop="25dp"
-                    android:layout_marginBottom="10dp"
-                    />
-
-                <EditText
-                    android:id="@+id/campoColonia"
-                    android:layout_width="300dp"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Colonia"
-                    android:inputType="text"
-                    android:textColor="#534B85"
-                    android:paddingVertical="12dp"
-                    android:paddingHorizontal="20dp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/border_edittext_background"
-                    />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:text="Calle:"
                     android:textColor="@color/primary_color"
                     android:textStyle="bold"
@@ -386,42 +336,42 @@
                     android:background="@drawable/border_edittext_background"
                     />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:layout_marginTop="25dp"
-                android:layout_marginBottom="10dp"
-                >
-
-                <TextView
-                    android:layout_width="0dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.45"
-                    android:text="Num.Int:"
-                    android:textColor="@color/primary_color"
-                    android:textStyle="bold"
-                    android:textSize="16dp"
-                    />
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="10dp"
+                    >
 
-                <Space
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.1" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.45"
+                        android:text="Num.Int:"
+                        android:textColor="@color/primary_color"
+                        android:textStyle="bold"
+                        android:textSize="16dp"
+                        />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.45"
-                    android:text="Num.Ext:"
-                    android:textColor="@color/primary_color"
-                    android:textStyle="bold"
-                    android:textSize="16dp"
-                    />
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.45"
+                        android:text="Num.Ext:"
+                        android:textColor="@color/primary_color"
+                        android:textStyle="bold"
+                        android:textSize="16dp"
+                        />
 
 
-            </LinearLayout>
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -464,6 +414,57 @@
                         />
 
                 </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Colonia:"
+                    android:textColor="@color/primary_color"
+                    android:textStyle="bold"
+                    android:textSize="16dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <EditText
+                    android:id="@+id/campoColonia"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Colonia"
+                    android:inputType="text"
+                    android:textColor="#534B85"
+                    android:paddingVertical="12dp"
+                    android:paddingHorizontal="20dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/border_edittext_background"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Estado:"
+                    android:textColor="@color/primary_color"
+                    android:textStyle="bold"
+                    android:textSize="16dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="10dp"
+                    />
+
+
+                <EditText
+                    android:id="@+id/campoEstado"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Estado"
+                    android:inputType="text"
+                    android:textColor="#534B85"
+                    android:paddingVertical="12dp"
+                    android:paddingHorizontal="20dp"
+                    android:background="@drawable/border_edittext_background"
+                    android:layout_gravity="center"
+                    />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -531,7 +532,6 @@
                         android:layout_weight="0.45"
                         android:backgroundTint="@color/primary_color"
                         android:textSize="13dp"
-
                         android:text="Eliminar Cliente" />
 
                     <Space
