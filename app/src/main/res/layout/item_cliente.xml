@@ -1,15 +1,20 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cliente1"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_marginHorizontal="15dp"
+    android:layout_marginTop="10dp"
     android:background="@drawable/card_white"
     android:paddingHorizontal="20dp"
     android:paddingVertical="20dp">
 
     <TextView
-        android:id="@+id/cliente_titulo"
+        android:id="@+id/cliente_titulo1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nombre del Cliente"
+        android:text="Edgar Omar Mancilla Vaca"
         android:textColor="#000000"
         android:textSize="22sp"
         android:textStyle="bold" />
@@ -17,16 +22,28 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_below="@id/cliente_titulo"
+        android:layout_below="@id/cliente_titulo1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="4dp"
         android:background="@drawable/background" />
 
+    <ImageView
+        android:id="@+id/foto_cliente"
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/cliente_titulo1"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/foto_perfil"
+        android:scaleType="centerCrop"
+        />
+
     <TextView
-        android:id="@+id/tituloCorreo"
+        android:id="@+id/tituloCorreo1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/cliente_titulo"
+        android:layout_below="@id/cliente_titulo1"
+        android:layout_toRightOf="@id/foto_cliente"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="15dp"
         android:text="Correo:"
         android:textColor="#000000"
@@ -34,22 +51,24 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/txtCorreo"
+        android:id="@+id/txtCorreo1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/cliente_titulo"
+        android:layout_below="@id/cliente_titulo1"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="15dp"
-        android:layout_toRightOf="@id/tituloCorreo"
-        android:text="correo@ejemplo.com"
+        android:layout_toRightOf="@id/tituloCorreo1"
+        android:text="edgarmncllav04@gmail.com"
         android:textColor="#000000"
         android:textSize="18sp" />
 
     <TextView
-        android:id="@+id/tituloTelefono"
+        android:id="@+id/tituloTelefono1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tituloCorreo"
+        android:layout_below="@id/txtCorreo1"
+        android:layout_toRightOf="@id/foto_cliente"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="5dp"
         android:text="Telefono:"
         android:textColor="#000000"
@@ -57,22 +76,24 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/txtTelefono"
+        android:id="@+id/txtTelefono1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tituloCorreo"
+        android:layout_below="@id/txtCorreo1"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
-        android:layout_toRightOf="@id/tituloTelefono"
-        android:text="1234567890"
+        android:layout_toRightOf="@id/tituloTelefono1"
+        android:text="5511343686"
         android:textColor="#000000"
         android:textSize="18sp" />
 
     <TextView
-        android:id="@+id/tituloPrestamos"
+        android:id="@+id/tituloPrestamos1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tituloTelefono"
+        android:layout_below="@id/tituloTelefono1"
+        android:layout_toRightOf="@id/foto_cliente"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="5dp"
         android:text="Prestamos Activos:"
         android:textColor="#000000"
@@ -80,26 +101,30 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/txtPrestamos"
+        android:id="@+id/txtPrestamos1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tituloTelefono"
+        android:layout_below="@id/tituloTelefono1"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
-        android:layout_toRightOf="@id/tituloPrestamos"
-        android:text="0"
+        android:layout_toRightOf="@id/tituloPrestamos1"
+        android:text="2"
         android:textColor="#000000"
         android:textSize="18sp" />
 
     <TextView
-        android:id="@+id/txtDetalles"
+        android:id="@+id/txtDetalles1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tituloPrestamos"
+        android:layout_below="@id/tituloPrestamos1"
+        android:layout_toRightOf="@id/foto_cliente"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="8dp"
         android:text="Ver Detalles"
-        android:textColor="#9488de"
+        android:textColor="@color/primary_color"
         android:textSize="18sp"
-        android:textStyle="italic" />
+        android:textStyle="italic"
+        android:clickable="true"
+        android:onClick="onClick"/>
 
 </RelativeLayout>
