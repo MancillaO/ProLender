@@ -48,7 +48,6 @@
 
         </RelativeLayout>
 
-
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -210,7 +209,6 @@
                     android:layout_marginBottom="10dp"
                     />
 
-
                 <EditText
                     android:id="@+id/campoNumero"
                     android:layout_width="300dp"
@@ -235,7 +233,6 @@
                     android:layout_marginTop="25dp"
                     android:layout_marginBottom="10dp"
                     />
-
 
                 <EditText
                     android:id="@+id/campoRFC"
@@ -262,7 +259,6 @@
                     android:layout_marginBottom="10dp"
                     />
 
-
                 <EditText
                     android:id="@+id/campoOcupación"
                     android:layout_width="300dp"
@@ -287,7 +283,6 @@
                     android:layout_marginTop="25dp"
                     android:layout_marginBottom="10dp"
                     />
-
 
                 <EditText
                     android:id="@+id/campoIngreso"
@@ -397,7 +392,6 @@
                 android:gravity="center_vertical"
                 android:layout_marginTop="25dp"
                 android:layout_marginBottom="10dp"
-
                 >
 
                 <TextView
@@ -551,8 +545,6 @@
                         android:text="Guardar Cambios" />
 
                 </LinearLayout>
-
-
             </LinearLayout>
         </ScrollView>
     </RelativeLayout>

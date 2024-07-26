@@ -53,78 +53,95 @@
                 />
         </RelativeLayout>
 
-
-        <RelativeLayout
-            android:id="@+id/add_cliente"
-            android:layout_width="170dp"
+        <LinearLayout
+            android:id="@+id/botones"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/buscar_cliente"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
             android:layout_marginTop="20dp"
-            android:background="@drawable/background_circle"
-            android:paddingHorizontal="20dp"
-            android:paddingVertical="10dp"
-            android:layout_marginStart="20dp"
-            android:clickable="true"
-            android:focusable="true">
+            android:layout_marginHorizontal="15dp"
+            android:layout_below="@id/buscar_cliente">
 
-
-            <TextView
-                android:id="@+id/txt_add_cliente"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/add_cliente"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:text="Agregar \nCliente"
-                android:textColor="#ffffff"
-                android:textSize="20sp"
-                android:textStyle="bold"/>
+                android:layout_weight="0.45"
+                android:background="@drawable/background_circle"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
 
-            <ImageView
-                android:id="@+id/add_cliente_icon"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:src="@drawable/icon_add_cliente" />
-        </RelativeLayout>
+                <TextView
+                    android:id="@+id/txt_add_cliente"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.70"
+                    android:layout_gravity="center_vertical"
+                    android:text="Agregar \nCliente"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
 
-        <RelativeLayout
-            android:id="@+id/add_solicitud"
-            android:layout_width="170dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/buscar_cliente"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/background_circle"
-            android:paddingHorizontal="20dp"
-            android:paddingVertical="10dp"
-            android:clickable="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginEnd="20dp"
-            android:focusable="true">
+                <ImageView
+                    android:id="@+id/add_cliente_icon"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="0.30"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/icon_add_cliente"
+                    />
+            </LinearLayout>
 
-
-            <TextView
-                android:id="@+id/txt_add_solicitud"
-                android:layout_width="wrap_content"
+            <Space
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:text="Agregar \nSolicitud"
-                android:textColor="#ffffff"
-                android:textSize="20sp"
-                android:textStyle="bold"/>
+                android:layout_weight="0.1" />
 
-            <ImageView
-                android:id="@+id/add_solicitud_icon"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:src="@drawable/icon_add_solicitud" />
-        </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/add_solicitud"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.45"
+                android:background="@drawable/background_circle"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/txt_add_solicitud"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.70"
+                    android:layout_gravity="center_vertical"
+                    android:text="Agregar \nSolicitud"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <ImageView
+                    android:id="@+id/add_solicitud_icon"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight=".30"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/icon_add_solicitud" />
+            </LinearLayout>
+
+
+        </LinearLayout>
 
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/add_cliente"
+            android:layout_below="@id/botones"
             android:layout_marginTop="10dp"
             >
 
@@ -201,7 +218,7 @@
                         android:id="@+id/tituloTelefono1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/tituloCorreo1"
+                        android:layout_below="@id/txtCorreo1"
                         android:layout_toRightOf="@id/foto_cliente"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="5dp"
@@ -214,7 +231,7 @@
                         android:id="@+id/txtTelefono1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/tituloCorreo1"
+                        android:layout_below="@id/txtCorreo1"
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="5dp"
                         android:layout_toRightOf="@id/tituloTelefono1"
@@ -331,7 +348,7 @@
                         android:id="@+id/tituloTelefono2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/tituloCorreo2"
+                        android:layout_below="@id/txtCorreo2"
                         android:layout_toRightOf="@id/foto_cliente2"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="5dp"
@@ -344,7 +361,7 @@
                         android:id="@+id/txtTelefono2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/tituloCorreo2"
+                        android:layout_below="@id/txtCorreo2"
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="5dp"
                         android:layout_toRightOf="@id/tituloTelefono2"
@@ -461,7 +478,7 @@
                         android:id="@+id/tituloTelefono3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/tituloCorreo3"
+                        android:layout_below="@id/txtCorreo3"
                         android:layout_toRightOf="@id/foto_cliente3"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="5dp"
@@ -474,7 +491,7 @@
                         android:id="@+id/txtTelefono3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/tituloCorreo3"
+                        android:layout_below="@id/txtCorreo3"
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="5dp"
                         android:layout_toRightOf="@id/tituloTelefono3"
@@ -589,7 +606,7 @@
                         android:id="@+id/tituloTelefono4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/tituloCorreo4"
+                        android:layout_below="@id/txtCorreo4"
                         android:layout_toRightOf="@id/foto_cliente4"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="5dp"
@@ -602,7 +619,7 @@
                         android:id="@+id/txtTelefono4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/tituloCorreo4"
+                        android:layout_below="@id/txtCorreo4"
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="5dp"
                         android:layout_toRightOf="@id/tituloTelefono4"

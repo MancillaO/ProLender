@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -13,8 +14,8 @@ import androidx.fragment.app.FragmentTransaction;
 
 public class ClientesFragment extends Fragment implements View.OnClickListener {
 
-    private RelativeLayout btnAgregar;
-    private RelativeLayout btnAgregarS;
+    private LinearLayout btnAgregar;
+    private LinearLayout btnAgregarS;
     private TextView btnDetalles;
 
     public ClientesFragment() {
