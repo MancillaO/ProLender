@@ -107,7 +107,7 @@
                 android:id="@+id/card1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight=".47"
+                android:layout_weight=".48"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
                 android:paddingVertical="20dp"
@@ -141,13 +141,13 @@
             <Space
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.1" />
+                android:layout_weight="0.04" />
 
             <RelativeLayout
                 android:id="@+id/card2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight=".47"
+                android:layout_weight=".48"
                 android:paddingLeft="25dp"
                 android:paddingRight="25dp"
                 android:paddingVertical="20dp"
