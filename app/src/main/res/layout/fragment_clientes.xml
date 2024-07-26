@@ -258,7 +258,9 @@
                         android:text="Ver Detalles"
                         android:textColor="@color/primary_color"
                         android:textSize="18sp"
-                        android:textStyle="italic" />
+                        android:textStyle="italic"
+                        android:clickable="true"
+                        android:onClick="onClick"/>
 
                 </RelativeLayout>
 

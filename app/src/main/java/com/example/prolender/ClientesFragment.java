@@ -5,6 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
+
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -13,6 +15,7 @@ public class ClientesFragment extends Fragment implements View.OnClickListener {
 
     private RelativeLayout btnAgregar;
     private RelativeLayout btnAgregarS;
+    private TextView btnDetalles;
 
     public ClientesFragment() {
         // Required empty public constructor
@@ -28,6 +31,8 @@ public class ClientesFragment extends Fragment implements View.OnClickListener {
         btnAgregar.setOnClickListener(this);
         btnAgregarS = view.findViewById(R.id.add_solicitud);
         btnAgregarS.setOnClickListener(this);
+        btnDetalles = view.findViewById(R.id.txtDetalles1);
+        btnDetalles.setOnClickListener(this);
         return view;
     }
 
@@ -49,6 +54,15 @@ public class ClientesFragment extends Fragment implements View.OnClickListener {
             FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.frameLayout, agregarSolicitudFragment);
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
+        }
+
+        if (id == R.id.txtDetalles1) {
+            Fragment detallesClienteFragment = new DetallesClienteFragment();
+            FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.frameLayout, detallesClienteFragment);
             fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
         }
