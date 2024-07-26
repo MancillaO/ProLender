@@ -10,20 +10,17 @@ public class UtilidadesCliente {
     public static String CAMPO_EMAIL = "email";
     public static String CAMPO_TELEFONO = "tel";
     public static String CAMPO_RFC = "rfc";
-    public static String CAMPO_OCUPACION = "ocupacion";
-    public static String CAMPO_INGRESOMENS = "ingresoMens";
+
 
 
     public static final String CREAR_TABLA_CLIENTES = "CREATE TABLE " + "" + TABLA_CLIENTES + "("
             + ID_CLIENTE + " " + "INTEGER PRIMARY KEY AUTOINCREMENT, "
-            + CAMPO_NOMBRE + " TEXT, "
-            + CAMPO_APAT + " TEXT, "
-            + CAMPO_AMAT + " TEXT, "
-            + CAMPO_FECHANAC + " TEXT, "
-            + CAMPO_EMAIL + " TEXT, "
-            + CAMPO_TELEFONO + " TEXT, "
-            + CAMPO_RFC + " TEXT, "
-            + CAMPO_OCUPACION + " TEXT, "
-            + CAMPO_INGRESOMENS+ " INTEGER)";
+            + CAMPO_NOMBRE + " TEXT NOT NULL, "
+            + CAMPO_APAT + " TEXT NOT NULL, "
+            + CAMPO_AMAT + " TEXT NOT NULL, "
+            + CAMPO_FECHANAC + " TEXT NOT NULL, "
+            + CAMPO_EMAIL + " TEXT NOT NULL, "
+            + CAMPO_TELEFONO + " TEXT NOT NULL, "
+            + CAMPO_RFC + " TEXT NOT NULL )";
 
 }
