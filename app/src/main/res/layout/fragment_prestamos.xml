@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -53,77 +52,91 @@
                 />
         </RelativeLayout>
 
-        <RelativeLayout
-            android:id="@+id/ver_solicitud"
-            android:layout_width="170dp"
+        <LinearLayout
+            android:id="@+id/botones"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/buscar_prestamo"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
             android:layout_marginTop="20dp"
-            android:background="@drawable/background_circle"
-            android:paddingHorizontal="20dp"
-            android:paddingVertical="10dp"
-            android:clickable="true"
-            android:layout_marginStart="20dp"
-            android:focusable="true">
+            android:layout_marginHorizontal="22dp"
+            android:layout_below="@id/buscar_prestamo">
 
-            <TextView
-                android:id="@+id/txt_add_solicitud"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/ver_solicitud"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:text="Ver \nSolicitud"
-                android:textColor="#ffffff"
-                android:textSize="20sp"
-                android:textStyle="bold"/>
+                android:layout_weight="0.45"
+                android:background="@drawable/background_circle"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
 
-            <ImageView
-                android:id="@+id/add_solicitud_icon"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:src="@drawable/icon_add_solicitud" />
-        </RelativeLayout>
+                <TextView
+                    android:id="@+id/txt_add_solicitud"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".70"
+                    android:text="Ver \nSolicitud"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
 
+                <ImageView
+                    android:id="@+id/add_solicitud_icon"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight=".30"
+                    android:src="@drawable/icon_add_solicitud" />
+            </LinearLayout>
 
-        <RelativeLayout
-            android:id="@+id/cobro_deposito"
-            android:layout_width="170dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/buscar_prestamo"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/background_circle"
-            android:paddingHorizontal="20dp"
-            android:paddingVertical="10dp"
-            android:clickable="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginEnd="20dp"
-            android:focusable="true">
-
-
-            <TextView
-                android:id="@+id/txt_cobro_deposito"
-                android:layout_width="wrap_content"
+            <Space
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:text="Cobro o \nDeposito"
-                android:textColor="#ffffff"
-                android:textSize="20sp"
-                android:textStyle="bold"/>
+                android:layout_weight="0.1" />
 
-            <ImageView
-                android:id="@+id/cobro_deposito_icon"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:src="@drawable/icon_cobro_deposito" />
-        </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/cobro_deposito"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.45"
+                android:background="@drawable/background_circle"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+
+                <TextView
+                    android:id="@+id/txt_cobro_deposito"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".70"
+                    android:text="Cobro o \nDeposito"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <ImageView
+                    android:id="@+id/cobro_deposito_icon"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight=".30"
+                    android:src="@drawable/icon_cobro_deposito" />
+
+            </LinearLayout>
+
+        </LinearLayout>
 
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/ver_solicitud"
+            android:layout_below="@id/botones"
             >
 
             <LinearLayout

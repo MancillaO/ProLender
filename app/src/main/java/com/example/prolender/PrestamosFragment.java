@@ -4,7 +4,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -12,8 +14,9 @@ import androidx.fragment.app.FragmentTransaction;
 
 public class PrestamosFragment extends Fragment implements View.OnClickListener {
 
-    private RelativeLayout btnAgregar;
-    private RelativeLayout btnCD;
+    private LinearLayout btnAgregar;
+    private LinearLayout btnCD;
+    private TextView btnDetalles;
 
 
     public PrestamosFragment() {
@@ -30,7 +33,8 @@ public class PrestamosFragment extends Fragment implements View.OnClickListener 
         btnAgregar.setOnClickListener(this);
         btnCD = view.findViewById(R.id.cobro_deposito);
         btnCD.setOnClickListener(this);
-
+        btnDetalles = view.findViewById(R.id.txtDetalles1);
+        btnDetalles.setOnClickListener(this);
         return view;
     }
 
@@ -56,6 +60,14 @@ public class PrestamosFragment extends Fragment implements View.OnClickListener 
             transaction.replace(R.id.frameLayout, cobroDepositoFragment);
             transaction.addToBackStack(null);
             transaction.commit();
+        }
+        if (id == R.id.txtDetalles1) {
+            Fragment detallesPrestamoFragment = new DetallesPrestamoFragment();
+            FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.frameLayout, detallesPrestamoFragment);
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
         }
     }
 }

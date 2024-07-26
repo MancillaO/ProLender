@@ -62,160 +62,118 @@
                 android:layout_gravity="center_horizontal"
                 >
 
-                <EditText
+                <TextView
                     android:id="@+id/campoOcupacion"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Ocupación"
-                    android:inputType="text"
-                    android:textColor="#1D2262"
+                    android:textSize="16dp"
+                    android:text="Ocupación"
+                    android:textColor="#54555B"
                     android:paddingVertical="12dp"
                     android:paddingHorizontal="20dp"
                     android:background="@drawable/border_edittext_background"
                     android:layout_gravity="center"
                     />
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/campoFecha"
+                    android:layout_width="300dp"
                     android:layout_height="wrap_content"
+                    android:text="Fecha"
+                    android:background="@drawable/border_edittext_background"
+                    android:paddingVertical="12dp"
+                    android:paddingHorizontal="20dp"
+                    android:textColor="#54555B"
                     android:layout_marginTop="25dp"
+                    android:textSize="16dp"
+                    />
 
-                    >
-
-                    <EditText
-                        android:id="@+id/campoFecha"
-                        android:layout_width="250dp"
-                        android:layout_height="wrap_content"
-                        android:ems="10"
-                        android:hint="dd/mm/aaaa"
-                        android:inputType="textPersonName"
-                        android:textColor="#1D2262"
-                        android:paddingVertical="12dp"
-                        android:paddingHorizontal="20dp"
-                        android:background="@drawable/border_edittext_background"
-                        />
-
-                    <ImageView
-                        android:id="@+id/selectDateButton"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_centerVertical="true"
-                        android:src="@drawable/icon_calendar"
-                        android:layout_alignParentRight="true"
-                        android:onClick="onClick"
-                        />
-                </RelativeLayout>
-
-                <EditText
+                <TextView
                     android:id="@+id/campoMontoS"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Monto Solicitado"
+                    android:textSize="16dp"
+                    android:text="Monto Solicitado"
                     android:layout_marginTop="25dp"
-                    android:inputType="textPersonName"
-                    android:textColor="#1D2262"
+                    android:textColor="#54555B"
                     android:paddingVertical="12dp"
                     android:paddingHorizontal="20dp"
                     android:background="@drawable/border_edittext_background"
                     android:layout_gravity="center"
                     />
 
-                <EditText
+                <TextView
                     android:id="@+id/campoIngreso"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Ingreso Mensual"
+                    android:textSize="16dp"
+                    android:text="Ingreso Mensual"
                     android:layout_marginTop="25dp"
-                    android:inputType="textPersonName"
-                    android:textColor="#1D2262"
+                    android:textColor="#54555B"
                     android:paddingVertical="12dp"
                     android:paddingHorizontal="20dp"
                     android:background="@drawable/border_edittext_background"
                     android:layout_gravity="center"
                     />
 
-                <EditText
+                <TextView
                     android:id="@+id/campoMontoA"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Monto Aprovado"
+                    android:textSize="16dp"
+                    android:text="Monto Aprovado"
                     android:layout_marginTop="25dp"
-                    android:inputType="textPersonName"
-                    android:textColor="#1D2262"
+                    android:textColor="#54555B"
                     android:paddingVertical="12dp"
                     android:paddingHorizontal="20dp"
                     android:background="@drawable/border_edittext_background"
                     android:layout_gravity="center"
                     />
 
-                <EditText
+                <TextView
                     android:id="@+id/campoDictamen"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Dictamen"
+                    android:textSize="16dp"
+                    android:text="Dictamen"
                     android:layout_marginTop="25dp"
-                    android:inputType="textPersonName"
-                    android:textColor="#1D2262"
+                    android:textColor="#54555B"
                     android:paddingVertical="12dp"
                     android:paddingHorizontal="20dp"
                     android:background="@drawable/border_edittext_background"
                     android:layout_gravity="center"
                     />
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/campoFechaD"
+                    android:layout_width="300dp"
                     android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:text="Fecha Dictamen"
+                    android:textColor="#54555B"
+                    android:paddingVertical="12dp"
+                    android:paddingHorizontal="20dp"
                     android:layout_marginTop="25dp"
+                    android:background="@drawable/border_edittext_background"
+                    />
 
-                    >
+                <Button
+                    android:id="@+id/btnAprovar"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:text="Aprovar"
+                    android:onClick="onClick"
+                    android:backgroundTint="@color/primary_color"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#ffffff"
+                    android:textSize="16dp"
+                    android:layout_marginTop="30dp"
+                    android:padding="12dp"
+                    android:layout_gravity="center"
+                    />
 
-                    <EditText
-                        android:id="@+id/campoFechaD"
-                        android:layout_width="250dp"
-                        android:layout_height="wrap_content"
-                        android:ems="10"
-                        android:hint="Fecha Dictamen"
-                        android:inputType="textPersonName"
-                        android:textColor="#1D2262"
-                        android:paddingVertical="12dp"
-                        android:paddingHorizontal="20dp"
-                        android:background="@drawable/border_edittext_background"
-                        />
-
-                    <ImageView
-                        android:id="@+id/selectDateButtonD"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_centerVertical="true"
-                        android:src="@drawable/icon_calendar"
-                        android:layout_alignParentRight="true"
-                        android:onClick="onClick"
-                        />
-                </RelativeLayout>
             </LinearLayout>
         </ScrollView>
-
-        <Button
-            android:id="@+id/btnAprovar"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:text="Aprovar"
-            android:onClick="onClick"
-            android:backgroundTint="@color/primary_color"
-            android:layout_centerHorizontal="true"
-            android:textColor="#ffffff"
-            android:textSize="16dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="30dp"
-            android:padding="12dp"
-            android:layout_gravity="center"
-            />
-
 
     </RelativeLayout>
 

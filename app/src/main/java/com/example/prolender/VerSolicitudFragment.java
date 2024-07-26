@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -17,11 +18,6 @@ import androidx.fragment.app.FragmentTransaction;
 import java.util.Calendar;
 
 public class VerSolicitudFragment extends Fragment {
-
-    private EditText campoFecha;
-    private EditText campoFechaD;
-    private ImageView selectDateButton;
-    private ImageView selectDateButtonD;
 
     public VerSolicitudFragment() {
         // Required empty public constructor
@@ -45,60 +41,6 @@ public class VerSolicitudFragment extends Fragment {
                 fragmentTransaction.commit();
             }
         });
-
-        campoFecha = view.findViewById(R.id.campoFecha);
-        campoFechaD = view.findViewById(R.id.campoFechaD);
-        selectDateButton = view.findViewById(R.id.selectDateButton);
-        selectDateButtonD = view.findViewById(R.id.selectDateButtonD);
-
-        selectDateButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showDatePickerDialog();
-            }
-        });
-
-        selectDateButtonD.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showDatePickerDialogD();
-            }
-        });
-
         return view;
-    }
-
-    private void showDatePickerDialog() {
-        final Calendar calendar = Calendar.getInstance();
-        int year = calendar.get(Calendar.YEAR);
-        int month = calendar.get(Calendar.MONTH);
-        int day = calendar.get(Calendar.DAY_OF_MONTH);
-
-        DatePickerDialog datePickerDialog = new DatePickerDialog(getContext(), new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                // Update the EditText with the selected date
-                campoFecha.setText(dayOfMonth + "/" + (month + 1) + "/" + year);
-            }
-        }, year, month, day);
-
-        datePickerDialog.show();
-    }
-
-    private void showDatePickerDialogD() {
-        final Calendar calendar = Calendar.getInstance();
-        int year = calendar.get(Calendar.YEAR);
-        int month = calendar.get(Calendar.MONTH);
-        int day = calendar.get(Calendar.DAY_OF_MONTH);
-
-        DatePickerDialog datePickerDialog = new DatePickerDialog(getContext(), new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                // Update the EditText with the selected date
-                campoFechaD.setText(dayOfMonth + "/" + (month + 1) + "/" + year);
-            }
-        }, year, month, day);
-
-        datePickerDialog.show();
     }
 }

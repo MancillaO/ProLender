@@ -52,7 +52,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/topbar"
-            android:layout_marginTop="20dp"
             >
 
             <LinearLayout
@@ -71,6 +70,8 @@
                     android:textColor="@color/secondary_color"
                     android:textStyle="bold"
                     android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+
                     />
 
                 <TextView
@@ -520,9 +521,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:gravity="center_vertical">
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="20dp">
 
                     <Button
+                        android:id="@+id/btnEliminar"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.45"
@@ -537,6 +540,7 @@
                         android:layout_weight="0.1" />
 
                     <Button
+                        android:id="@+id/btnGuardar"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.45"

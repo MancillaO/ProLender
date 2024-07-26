@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetallesPrestamoFragment">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E9E9E9"
+        tools:context=".DetallesPrestamoFragment"
+        >
+
+        <RelativeLayout
+            android:id="@+id/topbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:background="@drawable/background_circle"
+            >
+
+            <TextView
+                android:id="@+id/txtTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Detalles del Prestamo"
+                android:textSize="22sp"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="20dp"
+                android:layout_centerVertical="true"
+                android:textStyle="bold"
+                />
+
+            <ImageView
+                android:id="@+id/IconSolicitud"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_add_solicitud"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/topbar"
+            >
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Monto Prestado:"
+                    android:textColor="@color/primary_color"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="40dp"
+                    />
+
+                <EditText
+                    android:id="@+id/campoMonto"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Monto Prestado"
+                    android:inputType="number"
+                    android:textColor="#1D2262"
+                    android:paddingVertical="12dp"
+                    android:paddingHorizontal="20dp"
+                    android:background="@drawable/border_edittext_background"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fecha de Corte:"
+                    android:textColor="@color/primary_color"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="10dp"
+                    />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/campoFechaC"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".80"
+                    android:ems="10"
+                    android:hint="Fecha de Corte"
+                    android:inputType="date"
+                    android:textColor="#1D2262"
+                    android:paddingVertical="12dp"
+                    android:paddingHorizontal="20dp"
+                    android:background="@drawable/border_edittext_background"
+                    />
+
+                <ImageView
+                    android:id="@+id/selectDateButtonC"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight=".20"
+                    android:src="@drawable/icon_calendar"
+                    android:onClick="onClick"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Plazo de Pago:"
+                android:textColor="@color/primary_color"
+                android:textStyle="bold"
+                android:textSize="17dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="10dp"
+                />
+
+                <EditText
+                    android:id="@+id/campoPlazo"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Plazo"
+                    android:inputType="text"
+                    android:textColor="#1D2262"
+                    android:paddingVertical="12dp"
+                    android:paddingHorizontal="20dp"
+                    android:background="@drawable/border_edittext_background"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Metodo de Pago:"
+                    android:textColor="@color/primary_color"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <EditText
+                    android:id="@+id/campoMetodo"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Metodo"
+                    android:inputType="text"
+                    android:textColor="#1D2262"
+                    android:paddingVertical="12dp"
+                    android:paddingHorizontal="20dp"
+                    android:background="@drawable/border_edittext_background"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fecha de deposito:"
+                    android:textColor="@color/primary_color"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <EditText
+                        android:id="@+id/campoFechaD"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".80"
+                        android:ems="10"
+                        android:hint="Fecha de Deposito"
+                        android:inputType="date"
+                        android:textColor="#1D2262"
+                        android:paddingVertical="12dp"
+                        android:paddingHorizontal="20dp"
+                        android:background="@drawable/border_edittext_background"
+                        />
+
+                    <ImageView
+                        android:id="@+id/selectDateButtonD"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight=".20"
+                        android:src="@drawable/icon_calendar"
+                        android:onClick="onClick"
+                        />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cliente:"
+                    android:textColor="@color/primary_color"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <EditText
+                    android:id="@+id/campoNombre"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Nombre(s)"
+                    android:inputType="textPersonName"
+                    android:textColor="#1D2262"
+                    android:paddingVertical="12dp"
+                    android:paddingHorizontal="20dp"
+                    android:background="@drawable/border_edittext_background"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/botones"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center_vertical">
+
+                    <Button
+                        android:id="@+id/btnEliminar"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.45"
+                        android:backgroundTint="@color/primary_color"
+                        android:textSize="13dp"
+                        android:text="Eliminar Prestamos" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1" />
+
+                    <Button
+                        android:id="@+id/btnGuardar"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.45"
+                        android:backgroundTint="@color/primary_color"
+                        android:textSize="13dp"
+                        android:text="Guardar Cambios" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </RelativeLayout>
+</FrameLayout>
