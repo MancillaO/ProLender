@@ -218,8 +218,6 @@
                         android:textColor="#000000"
                         android:textSize="18sp" />
 
-
-
                     <TextView
                         android:id="@+id/txtDetalles1"
                         android:layout_width="wrap_content"
