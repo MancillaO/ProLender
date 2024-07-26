@@ -18,7 +18,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.example.prolender.Utilidades.UtilidadesCliente;
 
 public class AgregarClientesFragment extends Fragment {
-    EditText nombre, apat, amat, fechaNac, email, tel, rfc, ocupacion, ingreso;
+    EditText nombre, apat, amat, fechaNac, email, tel, rfc;
 
     public AgregarClientesFragment() {
         // Required empty public constructor
@@ -38,6 +38,7 @@ public class AgregarClientesFragment extends Fragment {
         rfc = view.findViewById(R.id.campoRFC);
 
 
+
         Button btnContinuar = view.findViewById(R.id.btnContinuarCliente);
         btnContinuar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,6 +52,7 @@ public class AgregarClientesFragment extends Fragment {
                 fragmentTransaction.replace(R.id.frameLayout, agregarDireccionFragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
+
             }
         });
 
@@ -70,9 +72,7 @@ public class AgregarClientesFragment extends Fragment {
             + UtilidadesCliente.CAMPO_FECHANAC + ","
             + UtilidadesCliente.CAMPO_EMAIL + ","
             + UtilidadesCliente.CAMPO_TELEFONO + ","
-            + UtilidadesCliente.CAMPO_RFC + ","
-            + UtilidadesCliente.CAMPO_OCUPACION + ","
-            + UtilidadesCliente.CAMPO_INGRESOMENS + ")"
+            + UtilidadesCliente.CAMPO_RFC + ")"
             + " VALUES ('"
             + nombre.getText().toString() + "','"
             + apat.getText().toString() + "','"
@@ -80,9 +80,8 @@ public class AgregarClientesFragment extends Fragment {
             + fechaNac.getText().toString() + "','"
             + email.getText().toString() + "','"
             + tel.getText().toString() + "','"
-            + rfc.getText().toString() + "','"
-            + ocupacion.getText().toString() + "','"
-            + ingreso.getText().toString() + "')";
+            + rfc.getText().toString() + "')";
+
 
             db.execSQL(insertarCliente);
             Toast.makeText(context,"Cliente Registrado ", Toast.LENGTH_SHORT).show();

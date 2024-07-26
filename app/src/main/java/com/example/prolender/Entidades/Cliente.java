@@ -9,15 +9,13 @@ public class Cliente {
     private String email;
     private String tel;
     private String rfc;
-    private String ocupacion;
-    private long ingresoMens;
 
 
     public Cliente() {
 
     }
 
-    public Cliente(int id_cliente, String nombre, String apat, String amat, String fechaNac, String email, String tel, String rfc, String ocupacion, long ingresoMens) {
+    public Cliente(int id_cliente, String nombre, String apat, String amat, String fechaNac, String email, String tel, String rfc) {
         this.id_cliente = id_cliente;
         this.nombre = nombre;
         this.apat = apat;
@@ -26,8 +24,6 @@ public class Cliente {
         this.email = email;
         this.tel = tel;
         this.rfc = rfc;
-        this.ocupacion = ocupacion;
-        this.ingresoMens = ingresoMens;
     }
 
     public int getId_cliente() {
@@ -94,19 +90,5 @@ public class Cliente {
         this.rfc = rfc;
     }
 
-    public String getOcupacion() {
-        return ocupacion;
-    }
 
-    public void setOcupacion(String ocupacion) {
-        this.ocupacion = ocupacion;
-    }
-
-    public long getIngresoMens() {
-        return ingresoMens;
-    }
-
-    public void setIngresoMens(long ingresoMens) {
-        this.ingresoMens = ingresoMens;
-    }
 }
