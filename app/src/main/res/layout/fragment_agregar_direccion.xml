@@ -6,8 +6,6 @@
     tools:context=".AgregarDireccionFragment">
 
     <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#E9E9E9"
@@ -67,16 +65,14 @@
                     android:id="@+id/campoCalle"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Calle"
-
-                    android:inputType="text"
-                    android:textColor="#534B85"
-                    android:paddingVertical="12dp"
-                    android:paddingHorizontal="20dp"
                     android:layout_gravity="center"
                     android:background="@drawable/border_edittext_background"
-                    />
+                    android:ems="10"
+                    android:hint="Calle"
+                    android:inputType="text"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="12dp"
+                    android:textColor="#534B85" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
