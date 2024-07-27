@@ -65,7 +65,7 @@ public class AgregarClientesFragment extends Fragment {
             ConexionSQLiteHelper conn = new ConexionSQLiteHelper(context, "ProLender", null, 1);
             SQLiteDatabase db = conn.getWritableDatabase();
 
-            String insertarCliente = "INSERT INTO " + UtilidadesCliente.TABLA_CLIENTES + " ( "
+            String insertarCliente = "INSERT INTO " + UtilidadesCliente.TABLA_CLIENTE + " ( "
             + UtilidadesCliente.CAMPO_NOMBRE + ","
             + UtilidadesCliente.CAMPO_APAT + ","
             + UtilidadesCliente.CAMPO_AMAT + ","

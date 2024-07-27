@@ -92,7 +92,6 @@
                     android:paddingHorizontal="20dp"
                     android:background="@drawable/border_edittext_background"
                     android:layout_gravity="center"
-
                     />
 
                 <EditText
@@ -153,7 +152,6 @@
                     android:paddingHorizontal="20dp"
                     android:background="@drawable/border_edittext_background"
                     android:layout_gravity="center"
-
                     />
 
                 <EditText

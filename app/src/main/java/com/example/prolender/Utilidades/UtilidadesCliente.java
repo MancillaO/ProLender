@@ -1,8 +1,8 @@
 package com.example.prolender.Utilidades;
 
 public class UtilidadesCliente {
-    public static String TABLA_CLIENTES = "clientes";
-    public static String ID_CLIENTE = "id";
+    public static String TABLA_CLIENTE = "cliente";
+    public static String ID_CLIENTE = "id_cliente";
     public static String CAMPO_NOMBRE = "nombre";
     public static String CAMPO_APAT = "apat";
     public static String CAMPO_AMAT = "amat";
@@ -13,7 +13,7 @@ public class UtilidadesCliente {
 
 
 
-    public static final String CREAR_TABLA_CLIENTES = "CREATE TABLE " + "" + TABLA_CLIENTES + "("
+    public static final String CREAR_TABLA_CLIENTE = "CREATE TABLE " + "" + TABLA_CLIENTE + "("
             + ID_CLIENTE + " " + "INTEGER PRIMARY KEY AUTOINCREMENT, "
             + CAMPO_NOMBRE + " TEXT NOT NULL, "
             + CAMPO_APAT + " TEXT NOT NULL, "
