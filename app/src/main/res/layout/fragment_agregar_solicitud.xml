@@ -68,34 +68,43 @@
                     android:paddingVertical="12dp"
                     android:textColor="#1D2262" />
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
+            <LinearLayout
+                android:id="@+id/layoutFecha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="25dp"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/campoFecha"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="25dp"
+                    android:layout_weight=".80"
+                    android:background="@drawable/border_edittext_background"
+                    android:ems="10"
+                    android:hint="dd/mm/aaaa"
+                    android:inputType="textPersonName"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="12dp"
+                    android:textColor="#1D2262" />
 
-                    >
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.04" />
 
-                    <EditText
-                        android:id="@+id/campoFecha"
-                        android:layout_width="250dp"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/border_edittext_background"
-                        android:ems="10"
-                        android:hint="dd/mm/aaaa"
-                        android:inputType="textPersonName"
-                        android:paddingHorizontal="20dp"
-                        android:paddingVertical="12dp"
-                        android:textColor="#1D2262" />
+                <ImageView
+                    android:id="@+id/selectDateButton"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight=".20"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:onClick="onClick"
+                    android:src="@drawable/icon_calendar" />
 
-                    <ImageView
-                        android:id="@+id/selectDateButton"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:onClick="onClick"
-                        android:src="@drawable/icon_calendar" />
-                </RelativeLayout>
+            </LinearLayout>
 
                 <EditText
                     android:id="@+id/campoMonto"

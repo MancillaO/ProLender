@@ -2,6 +2,7 @@ package com.example.prolender;
 
 
 import android.app.AlertDialog;
+import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.database.sqlite.SQLiteDatabase;
@@ -10,7 +11,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 
 import androidx.fragment.app.Fragment;
@@ -19,8 +22,12 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.example.prolender.Utilidades.UtilidadesCliente;
 
+import java.util.Calendar;
+
 public class AgregarClientesFragment extends Fragment {
     EditText nombre, apat, amat, fechaNac, email, tel, rfc;
+    private EditText campoFecha;
+    private ImageView selectDateButton;
 
     public AgregarClientesFragment() {
         // Required empty public constructor
@@ -39,7 +46,15 @@ public class AgregarClientesFragment extends Fragment {
         tel = view.findViewById(R.id.campoNumero);
         rfc = view.findViewById(R.id.campoRFC);
 
+        campoFecha = view.findViewById(R.id.campoFecha);
+        selectDateButton = view.findViewById(R.id.selectDateButton);
 
+        selectDateButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDatePickerDialog();
+            }
+        });
 
         Button btnContinuar = view.findViewById(R.id.btnContinuarCliente);
         btnContinuar.setOnClickListener(new View.OnClickListener() {
@@ -59,6 +74,23 @@ public class AgregarClientesFragment extends Fragment {
         });
 
         return view;
+    }
+
+    private void showDatePickerDialog() {
+        final Calendar calendar = Calendar.getInstance();
+        int year = calendar.get(Calendar.YEAR);
+        int month = calendar.get(Calendar.MONTH);
+        int day = calendar.get(Calendar.DAY_OF_MONTH);
+
+        DatePickerDialog datePickerDialog = new DatePickerDialog(getContext(), new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                // Update the EditText with the selected date
+                campoFecha.setText(dayOfMonth + "/" + (month + 1) + "/" + year);
+            }
+        }, year, month, day);
+
+        datePickerDialog.show();
     }
 
     public void ingresarCliente(){

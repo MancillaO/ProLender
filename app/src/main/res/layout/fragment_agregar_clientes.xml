@@ -109,20 +109,45 @@
                     android:layout_gravity="center"
                     />
 
-                <EditText
-                    android:id="@+id/campoFecha"
-                    android:layout_width="300dp"
+                <LinearLayout
+                    android:id="@+id/layoutFecha"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Fecha de Nacimiento: dd/mm/yyyy"
+                    android:orientation="horizontal"
                     android:layout_marginTop="25dp"
-                    android:inputType="date"
-                    android:textColor="#1D2262"
-                    android:paddingVertical="12dp"
-                    android:paddingHorizontal="20dp"
-                    android:background="@drawable/border_edittext_background"
-                    android:layout_gravity="center"
-                    />
+                    android:gravity="center_vertical">
+
+                    <EditText
+                        android:id="@+id/campoFecha"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".80"
+                        android:ems="10"
+                        android:hint="Fecha de Nacimiento"
+                        android:inputType="date"
+                        android:textColor="#1D2262"
+                        android:paddingVertical="12dp"
+                        android:paddingHorizontal="20dp"
+                        android:background="@drawable/border_edittext_background"
+                        />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.04" />
+
+                    <ImageView
+                        android:id="@+id/selectDateButton"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight=".20"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:onClick="onClick"
+                        android:src="@drawable/icon_calendar" />
+
+
+                </LinearLayout>
 
                 <EditText
                     android:id="@+id/campoCorreo"
