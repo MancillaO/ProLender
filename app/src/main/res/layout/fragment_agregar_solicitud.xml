@@ -6,45 +6,39 @@
     tools:context=".AgregarSolicitudFragment">
 
     <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#E9E9E9"
-        tools:context=".AgregarSolicitudFragment"
-        >
+        tools:context=".AgregarSolicitudFragment">
 
         <RelativeLayout
             android:id="@+id/topbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
             android:layout_marginHorizontal="20dp"
-            android:paddingVertical="10dp"
+            android:layout_marginTop="15dp"
             android:background="@drawable/background_circle"
-            >
+            android:paddingVertical="10dp">
 
             <TextView
                 android:id="@+id/txtTitulo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Datos Personales"
-                android:textSize="22sp"
-                android:textColor="#ffffff"
-                android:layout_marginLeft="20dp"
                 android:layout_centerVertical="true"
-                android:textStyle="bold"
-                />
+                android:layout_marginLeft="20dp"
+                android:text="Datos Personales"
+                android:textColor="#ffffff"
+                android:textSize="22sp"
+                android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/IconSolicitud"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:layout_centerVertical="true"
-                android:src="@drawable/icon_add_solicitud"
                 android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
                 android:layout_marginRight="20dp"
-                />
+                android:src="@drawable/icon_add_solicitud" />
 
         </RelativeLayout>
 
@@ -53,29 +47,26 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/topbar"
-            android:layout_marginTop="40dp"
-            >
+            android:layout_marginTop="40dp">
 
             <LinearLayout
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:layout_gravity="center_horizontal"
-                >
+                android:orientation="vertical">
 
                 <EditText
                     android:id="@+id/campoOcupacionSoli"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/border_edittext_background"
                     android:ems="10"
                     android:hint="Ocupación"
                     android:inputType="text"
-                    android:textColor="#1D2262"
-                    android:paddingVertical="12dp"
                     android:paddingHorizontal="20dp"
-                    android:background="@drawable/border_edittext_background"
-                    android:layout_gravity="center"
-                    />
+                    android:paddingVertical="12dp"
+                    android:textColor="#1D2262" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -88,55 +79,51 @@
                         android:id="@+id/campoFecha"
                         android:layout_width="250dp"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/border_edittext_background"
                         android:ems="10"
                         android:hint="dd/mm/aaaa"
                         android:inputType="textPersonName"
-                        android:textColor="#1D2262"
-                        android:paddingVertical="12dp"
                         android:paddingHorizontal="20dp"
-                        android:background="@drawable/border_edittext_background"
-                        />
+                        android:paddingVertical="12dp"
+                        android:textColor="#1D2262" />
 
                     <ImageView
                         android:id="@+id/selectDateButton"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:layout_centerVertical="true"
-                        android:src="@drawable/icon_calendar"
                         android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
                         android:onClick="onClick"
-                        />
+                        android:src="@drawable/icon_calendar" />
                 </RelativeLayout>
 
                 <EditText
                     android:id="@+id/campoMonto"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/border_edittext_background"
                     android:ems="10"
                     android:hint="Monto Solicitado"
-                    android:layout_marginTop="25dp"
                     android:inputType="textPersonName"
-                    android:textColor="#1D2262"
-                    android:paddingVertical="12dp"
                     android:paddingHorizontal="20dp"
-                    android:background="@drawable/border_edittext_background"
-                    android:layout_gravity="center"
-                    />
+                    android:paddingVertical="12dp"
+                    android:textColor="#1D2262" />
 
                 <EditText
-                    android:id="@+id/campoIngresoSoli"
+                    android:id="@+id/campoIngreso"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/border_edittext_background"
                     android:ems="10"
                     android:hint="Ingreso Mensual"
-                    android:layout_marginTop="25dp"
                     android:inputType="textPersonName"
-                    android:textColor="#1D2262"
-                    android:paddingVertical="12dp"
                     android:paddingHorizontal="20dp"
-                    android:background="@drawable/border_edittext_background"
-                    android:layout_gravity="center"
-                    />
+                    android:paddingVertical="12dp"
+                    android:textColor="#1D2262" />
 
             </LinearLayout>
         </ScrollView>
@@ -145,16 +132,15 @@
             android:id="@+id/btnRegistrar"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:text="Registrar"
-            android:onClick="onClick"
-            android:backgroundTint="@color/primary_color"
-            android:layout_centerHorizontal="true"
-            android:textColor="#ffffff"
-            android:textSize="16dp"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="30dp"
-            android:padding="12dp"
+            android:layout_centerHorizontal="true"
             android:layout_gravity="center"
-            />
+            android:layout_marginBottom="30dp"
+            android:backgroundTint="@color/primary_color"
+            android:onClick="onClick"
+            android:padding="12dp"
+            android:text="Registrar"
+            android:textColor="#ffffff"
+            android:textSize="16dp" />
     </RelativeLayout>
 </FrameLayout>

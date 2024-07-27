@@ -1,7 +1,9 @@
 package com.example.prolender;
 
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
+
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -65,7 +67,7 @@ public class AgregarClientesFragment extends Fragment {
             ConexionSQLiteHelper conn = new ConexionSQLiteHelper(context, "ProLender", null, 1);
             SQLiteDatabase db = conn.getWritableDatabase();
 
-            String insertarCliente = "INSERT INTO " + UtilidadesCliente.TABLA_CLIENTES + " ( "
+            String insertarCliente = "INSERT INTO " + UtilidadesCliente.TABLA_CLIENTE + " ( "
             + UtilidadesCliente.CAMPO_NOMBRE + ","
             + UtilidadesCliente.CAMPO_APAT + ","
             + UtilidadesCliente.CAMPO_AMAT + ","
@@ -84,7 +86,6 @@ public class AgregarClientesFragment extends Fragment {
 
 
             db.execSQL(insertarCliente);
-            Toast.makeText(context,"Cliente Registrado ", Toast.LENGTH_SHORT).show();
             db.close();
 
         }
