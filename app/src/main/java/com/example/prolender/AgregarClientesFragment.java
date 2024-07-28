@@ -1,6 +1,5 @@
 package com.example.prolender;
 
-
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.content.Context;
@@ -14,7 +13,8 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
-
+import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -35,7 +35,7 @@ public class AgregarClientesFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+
         View view = inflater.inflate(R.layout.fragment_agregar_clientes, container, false);
 
         nombre = view.findViewById(R.id.campoNombre);
@@ -45,7 +45,6 @@ public class AgregarClientesFragment extends Fragment {
         email = view.findViewById(R.id.campoCorreo);
         tel = view.findViewById(R.id.campoNumero);
         rfc = view.findViewById(R.id.campoRFC);
-
         campoFecha = view.findViewById(R.id.campoFecha);
         selectDateButton = view.findViewById(R.id.selectDateButton);
 
@@ -70,6 +69,14 @@ public class AgregarClientesFragment extends Fragment {
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
 
+            }
+        });
+
+        LinearLayout btnSelectPhoto = view.findViewById(R.id.foto);
+        btnSelectPhoto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(), "Seleccionar foto", Toast.LENGTH_SHORT).show();
             }
         });
 
