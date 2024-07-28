@@ -62,6 +62,32 @@
                 android:layout_gravity="center_horizontal"
                 >
 
+                <LinearLayout
+                    android:id="@+id/foto"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center_horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="150dp"
+                        android:src="@drawable/icon_cambiar_foto"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Elegir Foto de Perfil"
+                        android:textColor="@color/secondary_color"
+                        android:layout_marginTop="10dp"
+                        android:textSize="16dp"
+                        />
+
+                </LinearLayout>
+
                 <EditText
                     android:id="@+id/campoNombre"
                     android:layout_width="300dp"
@@ -192,30 +218,28 @@
                     android:paddingHorizontal="20dp"
                     android:background="@drawable/border_edittext_background"
                     android:layout_gravity="center"
+                    />
+
+                <Button
+                    android:id="@+id/btnContinuarCliente"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:text="Continuar"
+                    android:onClick="onClick"
+                    android:backgroundTint="@color/primary_color"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#ffffff"
+                    android:textSize="16dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="20dp"
                     android:layout_marginBottom="20dp"
+                    android:padding="12dp"
+                    android:layout_gravity="center"
                     />
 
 
             </LinearLayout>
         </ScrollView>
-
-        <Button
-            android:id="@+id/btnContinuarCliente"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:text="Continuar"
-            android:onClick="onClick"
-            android:backgroundTint="@color/primary_color"
-            android:layout_centerHorizontal="true"
-            android:textColor="#ffffff"
-            android:textSize="16dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="20dp"
-            android:padding="12dp"
-            android:layout_gravity="center"
-            />
-
 
     </RelativeLayout>
 </FrameLayout>
