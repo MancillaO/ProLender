@@ -35,7 +35,7 @@
                 android:ems="10"
                 android:hint="Buscar por ID"
                 android:textStyle="bold"
-                android:inputType="text"
+                android:inputType="number"
                 android:layout_centerVertical="true"
                 android:paddingLeft="15dp"
                 android:textColorHint="#9995A8"
@@ -52,6 +52,7 @@
                 android:layout_marginRight="10dp"
                 android:src="@drawable/icon_buscar_prestamos"
                 android:onClick="onClick"
+                android:clickable="true"
                 />
 
         </RelativeLayout>
