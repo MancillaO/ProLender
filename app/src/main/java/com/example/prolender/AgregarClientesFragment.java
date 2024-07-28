@@ -77,6 +77,7 @@ public class AgregarClientesFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getActivity(), "Seleccionar foto", Toast.LENGTH_SHORT).show();
+                //TODO: Remplazar el toast por el codigo para guardar la foto de perfil
             }
         });
 
