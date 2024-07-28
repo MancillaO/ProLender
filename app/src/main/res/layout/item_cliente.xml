@@ -33,7 +33,7 @@
         android:layout_height="100dp"
         android:layout_below="@id/cliente_titulo1"
         android:layout_marginTop="15dp"
-        android:src="@drawable/foto_perfil"
+        android:src="@drawable/cambiar_foto"
         android:scaleType="centerCrop"
         />
 
