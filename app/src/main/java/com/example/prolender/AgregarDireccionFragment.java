@@ -93,7 +93,7 @@ public class AgregarDireccionFragment extends Fragment {
 
             db.execSQL(insertarDireccion);
             AlertDialog.Builder alerta = new AlertDialog.Builder(context);
-            alerta.setMessage("Cliente Registrado")
+            alerta.setMessage("Cliente Registrado "+id_cliente)
                     .setCancelable(true)
                     .setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
                         @Override
